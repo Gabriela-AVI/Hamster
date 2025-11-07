@@ -1,5 +1,8 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1762544092
-icon.svg::CompressedTexture2D::8808989235190531035::1762543540::1762543548::1::::<><><>0<>0<>46d28227b94c78aa47f499ec04016249<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-node_2d.tscn::PackedScene::8502627092442402755::1762543839::0::1::::<><><>0<>0<><>::
-README.md::TextFile::-1::1762346626::0::1::::<><><>0<>0<><>::
+::res://::1762551693
+icon.svg::CompressedTexture2D::8808989235190531035::1762550529::1762550576::1::::<><><>0<>0<>46d28227b94c78aa47f499ec04016249<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+node_2d.tscn::PackedScene::8502627092442402755::1762551646::0::1::::<><><>0<>0<><>::uid://cy7jc7ev5awp3::::res://assets/hamstersheet.png
+README.md::TextFile::-1::1762550529::0::1::::<><><>0<>0<><>::
+::res://assets/::1762550860
+hamstersheet.png::CompressedTexture2D::6523985415272282354::1762550692::1762550860::1::::<><><>0<>0<>ff195bdb7f414e254b8ff781f8121505<>res://.godot/imported/hamstersheet.png-fee795a1bb17306b9dc20afbef8acc9b.ctex::
+::res://scripts/::1762550855
