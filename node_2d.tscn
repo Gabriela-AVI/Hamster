@@ -1,6 +1,7 @@
-[gd_scene load_steps=27 format=3 uid="uid://dte0a5aprinvv"]
+[gd_scene load_steps=30 format=3 uid="uid://dte0a5aprinvv"]
 
 [ext_resource type="Texture2D" uid="uid://cy7jc7ev5awp3" path="res://assets/hamstersheet.png" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://bo01rn82laa35" path="res://assets/suelo.png" id="2_0e48y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0e48y"]
 atlas = ExtResource("1_wtcfe")
@@ -183,6 +184,12 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
+size = Vector2(24, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hol4"]
+size = Vector2(229, 10)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
@@ -192,6 +199,18 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_gt76g")
 animation = &"idle"
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_epypp")
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(25, 27)
+shape = SubResource("RectangleShape2D_0hol4")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(5.722046e-06, 0.5000019)
+scale = Vector2(0.8394161, 0.35483867)
+texture = ExtResource("2_0e48y")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
