@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4bo6jqt3nkso"]
+
+[ext_resource type="PackedScene" uid="uid://io67g1edo47j" path="res://scenes/player.tscn" id="1_154ah"]
+[ext_resource type="PackedScene" uid="uid://7xsme07w8gfy" path="res://scenes/prueba.tscn" id="2_4mogs"]
+[ext_resource type="Script" uid="uid://ci3ykv8hj15lp" path="res://scripts/controller.gd" id="3_6jmlm"]
+
+[node name="NivelPrueba" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_154ah")]
+
+[node name="Prueba" parent="." instance=ExtResource("2_4mogs")]
+
+[node name="controller" type="Node2D" parent="."]
+script = ExtResource("3_6jmlm")
+
+[connection signal="curar_personaje" from="CharacterBody2D" to="controller" method="_on_character_body_2d_curar_personaje"]
