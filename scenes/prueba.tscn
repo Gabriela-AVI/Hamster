@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://7xsme07w8gfy"]
+[gd_scene load_steps=4 format=3 uid="uid://7xsme07w8gfy"]
 
 [ext_resource type="Texture2D" uid="uid://dxre1be3wsggh" path="res://icon.svg" id="1_1eu8g"]
+[ext_resource type="Script" uid="uid://dnaah2y1mlb3l" path="res://scenes/prueba.gd" id="1_aoy30"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aoy30"]
 size = Vector2(116.8, 113.77778)
 
 [node name="Prueba" type="Node2D"]
+script = ExtResource("1_aoy30")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, 0)
@@ -17,3 +19,5 @@ texture = ExtResource("1_1eu8g")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
 position = Vector2(0.799997, 1.5070409e-06)
 shape = SubResource("RectangleShape2D_aoy30")
+
+[connection signal="body_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_body_entered"]
