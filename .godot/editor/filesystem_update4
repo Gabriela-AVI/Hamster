@@ -1,6 +1,5 @@
-res://scripts/player.gd
-res://scenes/player.tscn
-res://scenes/prueba.gd
-res://scripts/controller.gd
-res://scenes/tile_map_layer.tscn
+res://pipe.tscn
+res://scenes/Game1.tscn
+res://player/player.tscn
 res://scenes/prueba.tscn
+res://objects/pipe.tscn

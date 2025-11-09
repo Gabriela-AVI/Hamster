@@ -36,7 +36,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		tiempo_quieto += delta #contador
 		
-		if tiempo_quieto > 3:
+		if tiempo_quieto > 4:
 			$AnimatedSprite2D.play("stop")
 		else:
 			$AnimatedSprite2D.play("idle")
