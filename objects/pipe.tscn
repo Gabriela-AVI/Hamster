@@ -59,7 +59,7 @@ texture_filter = 1
 scale = Vector2(1, 1.222)
 sprite_frames = SubResource("SpriteFrames_sj7mh")
 animation = &"pipe"
-frame_progress = 0.30644745
+frame_progress = 0.09551021
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)

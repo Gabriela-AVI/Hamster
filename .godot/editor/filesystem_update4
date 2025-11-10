@@ -1,5 +1,4 @@
-res://pipe.tscn
-res://scenes/Game1.tscn
 res://player/player.tscn
-res://scenes/prueba.tscn
 res://objects/pipe.tscn
+res://scenes/nivel_prueba.tscn
+res://objects/pipe.gd
