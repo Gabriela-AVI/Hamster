@@ -1,25 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://dte0a5aprinvv"]
+[gd_scene load_steps=5 format=4 uid="uid://dte0a5aprinvv"]
 
 [ext_resource type="PackedScene" uid="uid://io67g1edo47j" path="res://player/player.tscn" id="1_fdxsg"]
+[ext_resource type="PackedScene" uid="uid://c0ul0f1td4vuo" path="res://scenes/maps/tile_map_layer_orange.tscn" id="1_mua0o"]
 [ext_resource type="PackedScene" uid="uid://c5b47xg0npppn" path="res://objects/pipe.tscn" id="2_fdxsg"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dr5xv"]
 
 [node name="Game1" type="Node2D"]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_fdxsg")]
-position = Vector2(147, 101)
+[node name="TileMapLayer_orange" parent="." instance=ExtResource("1_mua0o")]
+tile_map_data = PackedByteArray("AAAGAP//AgAMAAYAAAAGAP7/AgAMAAUAAAAGAP3/AgAMAAQAAAAGAPz/AgANAAQAAAAFAPr/AgANAAAAAAAHAPr/AgAPAAAAAAAGAPr/AgAOAAAAAAAFAPv/AgANAAEAAAAHAPv/AgAPAAEAAAAHAPz/AgAPAAIAAAAFAPz/AgANAAIAAAAGAPv/AgAOAAEAAAAAAAAAAgACAAAAAAABAAAAAgACAAAAAAACAAAAAgACAAAAAAADAAAAAgACAAAAAAAEAAAAAgACAAAAAAAFAAAAAgACAAAAAAAGAAAAAgACAAAAAAAHAAAAAgACAAAAAAAIAAAAAgACAAAAAAAJAAAAAgACAAAAAAAKAAAAAgACAAAAAAALAAAAAgACAAAAAAA=")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(156, 126)
-zoom = Vector2(2, 2)
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_fdxsg")]
+position = Vector2(54, -18)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(9, 25)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(153, 128)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(2, 0)
+position = Vector2(-96, -125)
 shape = SubResource("WorldBoundaryShape2D_dr5xv")
 
 [node name="pipe" parent="." instance=ExtResource("2_fdxsg")]
-position = Vector2(179, 102)
+position = Vector2(-51, -26)

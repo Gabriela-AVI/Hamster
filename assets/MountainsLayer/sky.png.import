@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dinacuvtuyqsp"
-path="res://.godot/imported/map1.png-17133ed15e76e03825cb5df055222abc.ctex"
+uid="uid://c1rht70so1gia"
+path="res://.godot/imported/sky.png-9041ad04f3c3ab03d7f6a3042315602f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/map1.png"
-dest_files=["res://.godot/imported/map1.png-17133ed15e76e03825cb5df055222abc.ctex"]
+source_file="res://assets/MountainsLayer/sky.png"
+dest_files=["res://.godot/imported/sky.png-9041ad04f3c3ab03d7f6a3042315602f.ctex"]
 
 [params]
 
