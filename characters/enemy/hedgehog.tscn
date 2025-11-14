@@ -39,17 +39,18 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ignf"]
-size = Vector2(17, 11)
+size = Vector2(22, 14)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1, -16)
+position = Vector2(4.7683716e-07, -21)
+scale = Vector2(1.3125, 1.3125001)
 sprite_frames = SubResource("SpriteFrames_x1ois")
 animation = &"walk"
-frame_progress = 0.511931
+frame_progress = 0.27975276
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -5.5)
+position = Vector2(-1, -7)
 shape = SubResource("RectangleShape2D_7ignf")

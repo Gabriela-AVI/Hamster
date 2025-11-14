@@ -1,10 +1,11 @@
 extends Area2D
 
-# Start the pipe's movement
-func _ready() -> void:
-	$AnimatedSprite2D.play("pipe")
+func _ready():
+	$AnimatedSprite2D.play("pipe") # Animacion
+	connect("body_entered", _on_body_entered)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_body_entered(body):
+	if body.is_in_group("player"): 
+		body.recoger_moneda()       # Llamar método del jugador
+		queue_free()                # Eliminar moneda
+		

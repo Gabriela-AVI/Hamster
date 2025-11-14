@@ -1,15 +1,13 @@
-[gd_scene load_steps=5 format=4 uid="uid://dte0a5aprinvv"]
+[gd_scene load_steps=6 format=3 uid="uid://dte0a5aprinvv"]
 
 [ext_resource type="PackedScene" uid="uid://io67g1edo47j" path="res://characters/player/player.tscn" id="1_fdxsg"]
-[ext_resource type="PackedScene" uid="uid://c0ul0f1td4vuo" path="res://scenes/maps/tile_map_layer_orange.tscn" id="1_mua0o"]
 [ext_resource type="PackedScene" uid="uid://c5b47xg0npppn" path="res://objects/pipe.tscn" id="2_fdxsg"]
+[ext_resource type="PackedScene" uid="uid://che31e6u11c38" path="res://characters/enemy/hedgehog.tscn" id="4_yxo61"]
+[ext_resource type="PackedScene" uid="uid://bqa3s3vxnatjl" path="res://characters/enemy/enemy_rat.tscn" id="5_mcjy6"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dr5xv"]
 
 [node name="Game1" type="Node2D"]
-
-[node name="TileMapLayer_orange" parent="." instance=ExtResource("1_mua0o")]
-tile_map_data = PackedByteArray("AAAAAAAAAgACAAAAAAABAAAAAgACAAAAAAACAAAAAgACAAAAAAADAAAAAgACAAAAAAAEAAAAAgACAAAAAAAFAAAAAgACAAAAAAAGAAAAAgACAAAAAAAHAAAAAgACAAAAAAAGAP//AgAMAAYAAAAGAP7/AgAMAAUAAAAGAP3/AgAMAAQAAAAGAPz/AgANAAQAAAAFAPr/AgANAAAAAAAHAPr/AgAPAAAAAAAGAPr/AgAOAAAAAAAFAPv/AgANAAEAAAAHAPv/AgAPAAEAAAAHAPz/AgAPAAIAAAAFAPz/AgANAAIAAAAGAPv/AgAOAAEAAAAIAAAAAgACAAAAAAAJAAAAAgACAAAAAAAKAAAAAgACAAAAAAALAAAAAgACAAAAAAA=")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_fdxsg")]
 position = Vector2(54, -18)
@@ -28,3 +26,9 @@ shape = SubResource("WorldBoundaryShape2D_dr5xv")
 
 [node name="pipe" parent="." instance=ExtResource("2_fdxsg")]
 position = Vector2(-51, -26)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("4_yxo61")]
+position = Vector2(149, -2)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("5_mcjy6")]
+position = Vector2(178, -11)

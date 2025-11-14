@@ -4,3 +4,8 @@ res://player/player.tscn
 res://scenes/nivel_prueba.tscn
 res://scenes/Game1.tscn
 res://characters/enemy/hedgehog.tscn
+res://characters/enemy/enemy_rat.tscn
+res://characters/player/player.tscn
+res://characters/player/player.gd
+res://objects/pipe.tscn
+res://objects/pipe.gd
