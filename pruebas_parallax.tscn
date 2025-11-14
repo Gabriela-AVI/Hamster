@@ -41,6 +41,7 @@ motion_mirroring = Vector2(320, 0)
 
 [node name="Mountains" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
 texture_filter = 1
+position = Vector2(1, 1)
 texture = ExtResource("3_o0hdl")
 centered = false
 

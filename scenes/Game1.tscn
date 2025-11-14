@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=4 uid="uid://dte0a5aprinvv"]
 
-[ext_resource type="PackedScene" uid="uid://io67g1edo47j" path="res://player/player.tscn" id="1_fdxsg"]
+[ext_resource type="PackedScene" uid="uid://io67g1edo47j" path="res://characters/player/player.tscn" id="1_fdxsg"]
 [ext_resource type="PackedScene" uid="uid://c0ul0f1td4vuo" path="res://scenes/maps/tile_map_layer_orange.tscn" id="1_mua0o"]
 [ext_resource type="PackedScene" uid="uid://c5b47xg0npppn" path="res://objects/pipe.tscn" id="2_fdxsg"]
 
@@ -9,7 +9,7 @@
 [node name="Game1" type="Node2D"]
 
 [node name="TileMapLayer_orange" parent="." instance=ExtResource("1_mua0o")]
-tile_map_data = PackedByteArray("AAAGAP//AgAMAAYAAAAGAP7/AgAMAAUAAAAGAP3/AgAMAAQAAAAGAPz/AgANAAQAAAAFAPr/AgANAAAAAAAHAPr/AgAPAAAAAAAGAPr/AgAOAAAAAAAFAPv/AgANAAEAAAAHAPv/AgAPAAEAAAAHAPz/AgAPAAIAAAAFAPz/AgANAAIAAAAGAPv/AgAOAAEAAAAAAAAAAgACAAAAAAABAAAAAgACAAAAAAACAAAAAgACAAAAAAADAAAAAgACAAAAAAAEAAAAAgACAAAAAAAFAAAAAgACAAAAAAAGAAAAAgACAAAAAAAHAAAAAgACAAAAAAAIAAAAAgACAAAAAAAJAAAAAgACAAAAAAAKAAAAAgACAAAAAAALAAAAAgACAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAAAAAgACAAAAAAABAAAAAgACAAAAAAACAAAAAgACAAAAAAADAAAAAgACAAAAAAAEAAAAAgACAAAAAAAFAAAAAgACAAAAAAAGAAAAAgACAAAAAAAHAAAAAgACAAAAAAAGAP//AgAMAAYAAAAGAP7/AgAMAAUAAAAGAP3/AgAMAAQAAAAGAPz/AgANAAQAAAAFAPr/AgANAAAAAAAHAPr/AgAPAAAAAAAGAPr/AgAOAAAAAAAFAPv/AgANAAEAAAAHAPv/AgAPAAEAAAAHAPz/AgAPAAIAAAAFAPz/AgANAAIAAAAGAPv/AgAOAAEAAAAIAAAAAgACAAAAAAAJAAAAAgACAAAAAAAKAAAAAgACAAAAAAALAAAAAgACAAAAAAA=")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_fdxsg")]
 position = Vector2(54, -18)
