@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://drdx3m70kecub"]
-
-[sub_resource type="TileSet" id="TileSet_iakng"]
-physics_layer_0/collision_layer = 1
-
-[node name="TileMapLayer" type="TileMapLayer"]
-tile_set = SubResource("TileSet_iakng")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://c5b47xg0npppn"]
 
 [ext_resource type="Texture2D" uid="uid://d3g2oheh6110d" path="res://assets/pipa_sprite_sheet.png" id="1_ccrh7"]
-[ext_resource type="Script" uid="uid://bqfdhb1p3d7c6" path="res://objects/pipe.gd" id="1_hd0yu"]
+[ext_resource type="Script" uid="uid://bqfdhb1p3d7c6" path="res://characters_elements/pipe.gd" id="1_hd0yu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hd0yu"]
 atlas = ExtResource("1_ccrh7")
@@ -59,7 +59,7 @@ texture_filter = 1
 scale = Vector2(1, 1.222)
 sprite_frames = SubResource("SpriteFrames_sj7mh")
 animation = &"pipe"
-frame_progress = 0.8606097
+frame_progress = 0.39253417
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)

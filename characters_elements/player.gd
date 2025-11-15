@@ -3,7 +3,7 @@ extends CharacterBody2D
 signal curar_personaje()
 
 const SPEED = 100.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -250.0
 
 # DASH
 const DASH_SPEED = 250.0 #velocidad dash
@@ -15,6 +15,7 @@ var dash_timer = 0.0
 var dash_cooldown_timer = 0.0
 var dash_direction = 0.0
 
+# Otras variables
 var tiempo_quieto = 0
 var monedas = 0
 

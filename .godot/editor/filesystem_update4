@@ -9,3 +9,7 @@ res://characters/player/player.tscn
 res://characters/player/player.gd
 res://objects/pipe.tscn
 res://objects/pipe.gd
+res://characters/player.tscn
+res://characters/pipe.tscn
+res://scenes/Scene_Orange.tscn
+res://characters_elements/player.gd

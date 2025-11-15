@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1763139363
+::res://::1763159309
 icon.svg::CompressedTexture2D::8808989235190531035::1762550529::1762886102::1::::<><><>0<>0<>46d28227b94c78aa47f499ec04016249<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 pruebas_parallax.tscn::PackedScene::1632400964745541852::1763138557::0::1::::<><><>0<>0<><>::uid://cdiuddt2aqr6w::::res://scenes/script_parallax_background.gd<>uid://c1rht70so1gia::::res://assets/MountainsLayer/sky.png<>uid://j16vr8nx42km::::res://assets/MountainsLayer/far-mountains.png<>uid://ba63ohpk6656j::::res://assets/MountainsLayer/mountains.png<>uid://bqlgxf1di168i::::res://assets/MountainsLayer/trees.png
 README.md::TextFile::-1::1762550529::0::1::::<><><>0<>0<><>::
@@ -18,24 +18,22 @@ mountains.png::CompressedTexture2D::2452141862313635719::1762886085::1762886102:
 near-clouds.png::CompressedTexture2D::7596504044072043327::1762886085::1762886102::1::::<><><>0<>0<>3fb5a059f84e35f151a30800300b025f<>res://.godot/imported/near-clouds.png-4b151a6e2135dcdf3486037dd53d46d4.ctex::
 sky.png::CompressedTexture2D::6633306393032509016::1762886085::1762886102::1::::<><><>0<>0<>6748f511789825203c9860e101ac632e<>res://.godot/imported/sky.png-9041ad04f3c3ab03d7f6a3042315602f.ctex::
 trees.png::CompressedTexture2D::3532556015342409494::1762886085::1762886102::1::::<><><>0<>0<>a7034810fb79f9e912c5440d7d99fdfc<>res://.godot/imported/trees.png-45ccdcc2386325f611bafbc320201911.ctex::
-::res://characters/::1763139363
-::res://characters/enemy/::1763140972
-hedgehog.tscn::PackedScene::5274167549234472081::1763140972::0::1::::<><><>0<>0<><>::uid://di2e58y50sm4i::::res://assets/Hedgehog Sprite Sheet.png
-::res://characters/player/::1763139361
-player.gd::GDScript::8373282521086597355::1762721361::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player.tscn::PackedScene::592351765333164253::1763139361::0::1::::<><><>0<>0<><>::uid://cy7jc7ev5awp3::::res://assets/hamstersheet.png<>uid://drkc0ff63hxo2::::res://characters/player/player.gd<>uid://cvmpfmf6ijrhe::::res://assets/HusterRollAnimationpng.png
-::res://objects/::1762813555
-pipe.gd::GDScript::3519958815614920475::1762813555::0::1::::<>Area2D<><>0<>0<><>::
-pipe.tscn::PackedScene::6882390210936162735::1762813555::0::1::::<><><>0<>0<><>::uid://d3g2oheh6110d::::res://assets/pipa_sprite_sheet.png<>uid://bqfdhb1p3d7c6::::res://objects/pipe.gd
-::res://scenes/::1763142522
-Game1.tscn::PackedScene::8502627092442402755::1763142522::0::1::::<><><>0<>0<><>::uid://io67g1edo47j::::res://characters/player/player.tscn<>uid://c0ul0f1td4vuo::::res://scenes/maps/tile_map_layer_orange.tscn<>uid://c5b47xg0npppn::::res://objects/pipe.tscn<>uid://che31e6u11c38::::res://characters/enemy/hedgehog.tscn
-nivel_prueba.tscn::PackedScene::9197708790174319906::1763139361::0::1::::<><><>0<>0<><>::uid://io67g1edo47j::::res://player/player.tscn<>uid://7xsme07w8gfy::::res://scenes/prueba.tscn<>uid://ci3ykv8hj15lp::::res://scripts/controller.gd
+::res://characters/::1763159304
+enemy_rat.tscn::PackedScene::3511175906146474489::1763147156::0::1::::<><><>0<>0<><>::uid://u3udp2e7eg8r::::res://assets/Rat-DarkGrey-Walk.png
+hedgehog.tscn::PackedScene::5274167549234472081::1763144003::0::1::::<><><>0<>0<><>::uid://di2e58y50sm4i::::res://assets/Hedgehog Sprite Sheet.png
+pipe.gd::GDScript::3519958815614920475::1763146723::0::1::::<>Area2D<><>0<>0<><>::
+pipe.tscn::PackedScene::6882390210936162735::1763159320::0::1::::<><><>0<>0<><>::uid://d3g2oheh6110d::::res://assets/pipa_sprite_sheet.png<>uid://bqfdhb1p3d7c6::::res://characters/pipe.gd
+player.gd::GDScript::8373282521086597355::1763151850::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::592351765333164253::1763159320::0::1::::<><><>0<>0<><>::uid://cy7jc7ev5awp3::::res://assets/hamstersheet.png<>uid://drkc0ff63hxo2::::res://characters/player.gd<>uid://cvmpfmf6ijrhe::::res://assets/HusterRollAnimationpng.png
+::res://scenes/::1763159304
+Game1.tscn::PackedScene::8502627092442402755::1763159320::0::1::::<><><>0<>0<><>::uid://io67g1edo47j::::res://characters/player.tscn<>uid://c5b47xg0npppn::::res://characters/pipe.tscn
+nivel_prueba.tscn::PackedScene::9197708790174319906::1763159264::0::1::::<><><>0<>0<><>::uid://io67g1edo47j::::res://characters/player.tscn<>uid://7xsme07w8gfy::::res://scenes/prueba.tscn<>uid://ci3ykv8hj15lp::::res://scripts/controller.gd
 prueba.gd::GDScript::8071730975334609823::1762715725::0::1::::<>Node2D<><>0<>0<><>::
 prueba.tscn::PackedScene::2294638270355214338::1762726646::0::1::::<><><>0<>0<><>::uid://dxre1be3wsggh::::res://icon.svg<>uid://dnaah2y1mlb3l::::res://scenes/prueba.gd
-Scene_Orange.tscn::PackedScene::7473189350953216206::1763139361::0::1::::<><><>0<>0<><>::uid://c3ygbsp5xy4lj::::res://assets/tilemap_packed.png<>uid://io67g1edo47j::::res://characters/player/player.tscn
+Scene_Orange.tscn::PackedScene::7473189350953216206::1763159264::0::1::::<><><>0<>0<><>::uid://c3ygbsp5xy4lj::::res://assets/tilemap_packed.png<>uid://io67g1edo47j::::res://characters/player.tscn
 script_parallax_background.gd::GDScript::5001142805718561816::1762886085::0::1::::<>ParallaxBackground<><>0<>0<><>::
 tile_map_layer.tscn::PackedScene::8360112700114350993::1762715725::0::1::::<><><>0<>0<><>::
-::res://scenes/maps/::1763138551
-tile_map_layer_orange.tscn::PackedScene::6569562848836373122::1763138551::0::1::::<><><>0<>0<><>::uid://c3ygbsp5xy4lj::::res://assets/tilemap_packed.png
+::res://scenes/maps/::1763158885
+tile_map_layer_orange.tscn::PackedScene::6569562848836373122::1763158885::0::1::::<><><>0<>0<><>::uid://c3ygbsp5xy4lj::::res://assets/tilemap_packed.png
 ::res://scripts/::1762715816
 controller.gd::GDScript::5393630913669609725::1762715725::0::1::::<>Node<><>0<>0<><>::
