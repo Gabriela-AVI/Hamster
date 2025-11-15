@@ -1,15 +1,3 @@
-res://scenes/maps/tile_map_layer_orange.tscn
-res://pruebas_parallax.tscn
-res://player/player.tscn
-res://scenes/nivel_prueba.tscn
 res://scenes/Game1.tscn
-res://characters/enemy/hedgehog.tscn
-res://characters/enemy/enemy_rat.tscn
-res://characters/player/player.tscn
-res://characters/player/player.gd
-res://objects/pipe.tscn
-res://objects/pipe.gd
-res://characters/player.tscn
-res://characters/pipe.tscn
-res://scenes/Scene_Orange.tscn
 res://characters_elements/player.gd
+res://characters_elements/player.tscn

@@ -9,7 +9,6 @@ const JUMP_VELOCITY = -250.0
 const DASH_SPEED = 250.0 #velocidad dash
 const DASH_TIME = 0.3
 const DASH_COOLDOWN = 0.4
-
 var is_dashing = false
 var dash_timer = 0.0
 var dash_cooldown_timer = 0.0
@@ -103,3 +102,8 @@ func recoger_moneda():
 # FUNCIÓN CURA
 func curar():
 	curar_personaje.emit()
+
+# FUNCIÓN PARA PINCHOS 
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print("au")
+	pass # Replace with function body.

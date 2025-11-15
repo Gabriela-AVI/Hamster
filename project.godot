@@ -51,6 +51,12 @@ dash={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Sólido"
+2d_physics/layer_2="Daño"
+2d_physics/layer_3="Jugador"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
