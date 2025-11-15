@@ -124,9 +124,12 @@ func recoger_moneda():
 # FUNCIÓN PARA PINCHOS 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	vida -= 1
+	
+	$AudioDamage.play() 
+	
 	print("DEBUG → Vida actual: ", vida)
 	print("au")
-
+	
 	if vida <= 0:
 		morir()
 

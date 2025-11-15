@@ -1,6 +1,2 @@
-res://scenes/Game1.tscn
-res://characters_elements/heart.tscn
-res://characters_elements/heart2.tscn
-res://characters_elements/heart.gd
-res://characters_elements/player.gd
 res://characters_elements/player.tscn
+res://characters_elements/player.gd
