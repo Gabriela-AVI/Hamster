@@ -93,10 +93,20 @@ func start_dash(direction):
 		dash_direction = direction
 
 
-# RECOGER MONEDAS
-func recoger_moneda():
-	monedas += 1
-	print("DEBUG → Monedas recogidas: ", monedas)
+# FUNCIÓN MORIR
+func morir():
+	print("DEBUG → El jugador ha muerto")
+
+	# Dejar de mover
+	velocity = Vector2.ZERO
+	set_physics_process(false)
+
+	# Reproducir animación de muerte
+	$AnimatedSprite2D.play("die")
+
+	# Esperar un poco y reiniciar escena
+	await get_tree().create_timer(1.0).timeout
+	get_tree().reload_current_scene()
 
 
 # GANAR VIDA EXTRA
@@ -104,14 +114,23 @@ func ganar_vida(cantidad):
 	vida += cantidad
 	print("DEBUG → Vida actual: ", vida)
 
+
+# RECOGER MONEDAS
+func recoger_moneda():
+	monedas += 1
+	print("DEBUG → Monedas recogidas: ", monedas)
+
+
 # FUNCIÓN PARA PINCHOS 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	vida -= 1
 	print("DEBUG → Vida actual: ", vida)
 	print("au")
-	pass # Replace with function body.
-	
-	
+
+	if vida <= 0:
+		morir()
+
+
 	# FUNCIÓN CURA
 func curar():
 	curar_personaje.emit()
