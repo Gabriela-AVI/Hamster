@@ -17,6 +17,7 @@ var dash_direction = 0.0
 # Otras variables
 var tiempo_quieto = 0
 var monedas = 0
+var vida = 1
 
 func _physics_process(delta: float) -> void:
 
@@ -91,19 +92,26 @@ func start_dash(direction):
 	else:
 		dash_direction = direction
 
-	print("DEBUG → DASH ACTIVADO hacia: ", dash_direction)
 
-
-
+# RECOGER MONEDAS
 func recoger_moneda():
 	monedas += 1
 	print("DEBUG → Monedas recogidas: ", monedas)
 
-# FUNCIÓN CURA
-func curar():
-	curar_personaje.emit()
+
+# GANAR VIDA EXTRA
+func ganar_vida(cantidad):
+	vida += cantidad
+	print("DEBUG → Vida actual: ", vida)
 
 # FUNCIÓN PARA PINCHOS 
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	vida -= 1
+	print("DEBUG → Vida actual: ", vida)
 	print("au")
 	pass # Replace with function body.
+	
+	
+	# FUNCIÓN CURA
+func curar():
+	curar_personaje.emit()

@@ -1,8 +1,8 @@
 CollisionShape2D
+AnimatedSprite2D
 Area2D
 TileMapLayer
 Node2D
-AnimatedSprite2D
 CharacterBody2D
 ParallaxLayer
 ParallaxBackground
