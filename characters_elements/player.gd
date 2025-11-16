@@ -6,7 +6,7 @@ const SPEED = 100.0
 const JUMP_VELOCITY = -250.0
 
 # DASH
-const DASH_SPEED = 250.0 #velocidad dash
+const DASH_SPEED = 250.0
 const DASH_TIME = 0.3
 const DASH_COOLDOWN = 0.4
 var is_dashing = false
@@ -19,6 +19,10 @@ var tiempo_quieto = 0
 var monedas = 0
 var vida = 1
 
+# Detectar interacción con la puerta
+var puerta_area: Node = null
+
+
 func _physics_process(delta: float) -> void:
 
 	# --- TIMERS DEL DASH ---
@@ -30,14 +34,11 @@ func _physics_process(delta: float) -> void:
 		if dash_timer <= 0:
 			is_dashing = false
 
-		# Mantener animación de dash
 		$AnimatedSprite2D.play("dash")
-
 		velocity.x = dash_direction * DASH_SPEED
+		# mover
 		move_and_slide()
 		return
-
-
 
 	# --- GRAVEDAD ---
 	if not is_on_floor():
@@ -59,7 +60,6 @@ func _physics_process(delta: float) -> void:
 		start_dash(direction)
 		return
 
-
 	# --- ANIMACIONES ---
 	if direction != 0:
 		velocity.x = direction * SPEED
@@ -77,63 +77,82 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
+	# --- USAR PUERTA (E) ---
+	if Input.is_action_just_pressed("interact") and puerta_area != null:
+		puerta_area.abrir_puerta()
+		finalizar_nivel()
+		print("estoy muerta")
+
+
 # --- FUNCIÓN DASH ---
 func start_dash(direction):
 	is_dashing = true
 	dash_timer = DASH_TIME
 	dash_cooldown_timer = DASH_COOLDOWN
 
-	# Reproducir animación del dash
 	$AnimatedSprite2D.play("dash")
 
-	# Si no hay dirección, usar donde mira el sprite
 	if direction == 0:
 		dash_direction = -1 if $AnimatedSprite2D.flip_h else 1
 	else:
 		dash_direction = direction
 
 
-# FUNCIÓN MORIR
+# --- FUNCIÓN MORIR ---
 func morir():
 	print("DEBUG → El jugador ha muerto")
-
-	# Dejar de mover
 	velocity = Vector2.ZERO
 	set_physics_process(false)
-
-	# Reproducir animación de muerte
 	$AnimatedSprite2D.play("die")
 
-	# Esperar un poco y reiniciar escena
 	await get_tree().create_timer(1.0).timeout
 	get_tree().reload_current_scene()
 
 
-# GANAR VIDA EXTRA
+# --- GANAR VIDA ---
 func ganar_vida(cantidad):
 	vida += cantidad
 	print("DEBUG → Vida actual: ", vida)
 
 
-# RECOGER MONEDAS
+# --- RECOGER MONEDAS ---
 func recoger_moneda():
 	monedas += 1
 	print("DEBUG → Monedas recogidas: ", monedas)
 
 
-# FUNCIÓN PARA PINCHOS 
+# --- DAÑO ---
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	vida -= 1
-	
-	$AudioDamage.play() 
-	
+	$AudioDamage.play()
+
 	print("DEBUG → Vida actual: ", vida)
-	print("au")
-	
+
 	if vida <= 0:
 		morir()
 
 
-	# FUNCIÓN CURA
+# --- DETECTAR ENTRADA EN PUERTA ---
+func _on_door_area_body_entered(body):
+	if body == self:
+		puerta_area = get_parent().get_node("DoorArea")
+
+
+# --- DETECTAR SALIDA DE LA PUERTA ---
+func _on_door_area_body_exited(body):
+	if body == self:
+		puerta_area = null
+
+
+# --- CURAR ---
 func curar():
 	curar_personaje.emit()
+
+
+# --- TERMINAR NIVEL ---
+func finalizar_nivel():
+	print("Nivel completado 🎉")
+	await get_tree().create_timer(0.5).timeout
+	# Cambia a tu siguiente escena:
+	#get_tree().change_scene_to_file("res://next_level.tscn")
+	get_tree().quit()  # Temporal si no tienes siguiente nivel
