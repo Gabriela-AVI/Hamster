@@ -197,6 +197,10 @@ limit_smoothed = true
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
+[node name="enemy" parent="." instance=ExtResource("8_y3wct")]
+position = Vector2(851, 132)
+scale = Vector2(1.5, 1.5)
+
 [node name="RigidBody2D" parent="." instance=ExtResource("5_t4bav")]
 position = Vector2(547, 104)
 
@@ -223,10 +227,6 @@ position = Vector2(1412, 86)
 
 [node name="heart" parent="." instance=ExtResource("5_mcjy6")]
 position = Vector2(478, -9)
-
-[node name="enemy" parent="." instance=ExtResource("8_y3wct")]
-position = Vector2(851, 132)
-scale = Vector2(1.5, 1.5)
 
 [connection signal="body_entered" from="DoorArea" to="CharacterBody2D" method="_on_door_area_body_entered"]
 [connection signal="body_exited" from="DoorArea" to="CharacterBody2D" method="_on_door_area_body_exited"]
