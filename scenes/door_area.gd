@@ -34,7 +34,7 @@ func _on_body_exited(body):
 
 
 func abrir_puerta():
-	tilemap.set_cell_atlas_coords(
+	tilemap.set_cell(
 		puerta_pos,     # coordenada del tile
 		source_id,      # ID del tileset
 		puerta_abierta  # atlas coords del tile

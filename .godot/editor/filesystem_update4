@@ -1,4 +1,2 @@
 res://scenes/Game1.tscn
-res://characters_elements/player.tscn
 res://scenes/door_area.gd
-res://characters_elements/player.gd

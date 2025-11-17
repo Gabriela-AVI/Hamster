@@ -180,7 +180,7 @@ position = Vector2(1724, 77.5)
 shape = SubResource("RectangleShape2D_t4bav")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_fdxsg")]
-position = Vector2(1654, 46)
+position = Vector2(-324, -52)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(9, 25)
