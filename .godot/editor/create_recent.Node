@@ -1,5 +1,7 @@
 CollisionShape2D
 Area2D
+Sprite2D
+RigidBody2D
 AudioStreamPlayer2D
 AnimatedSprite2D
 TileMapLayer
@@ -7,6 +9,5 @@ Node2D
 CharacterBody2D
 ParallaxLayer
 ParallaxBackground
-Sprite2D
 StaticBody2D
 Camera2D

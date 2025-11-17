@@ -18,9 +18,9 @@ var source_id: int = 0
 
 func _ready():
 	if tilemap == null:
-		push_error("ERROR: No encuentro TileMapLayer 😭 Arrástralo al export variable.")
+		push_error("ERROR: No encuentro TileMapLayer.")
 	else:
-		print("✔ TileMapLayer asignado correctamente:", tilemap)
+		print("TileMapLayer asignado:", tilemap)
 
 
 func _on_body_entered(body):
@@ -32,7 +32,7 @@ func _on_body_exited(body):
 	if body.is_in_group("player"):
 		player_en_rango = false
 
-
+#
 func abrir_puerta():
 	tilemap.set_cell(
 		puerta_pos,     # coordenada del tile

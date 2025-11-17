@@ -91,11 +91,23 @@ func start_dash(direction):
 	dash_cooldown_timer = DASH_COOLDOWN
 
 	$AnimatedSprite2D.play("dash")
+	_push_bodies()
 
 	if direction == 0:
 		dash_direction = -1 if $AnimatedSprite2D.flip_h else 1
 	else:
 		dash_direction = direction
+		
+# -- EMPUJAR CAJA --
+func _push_bodies():
+	for i in range(get_slide_collision_count()):
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		if collider is RigidBody2D:
+			var push_dir = collision.get_normal() * -1.0
+			push_dir.y = 0
+			var force = push_dir * DASH_SPEED / 1
+			collider.apply_central_impulse(force)
 
 
 # --- FUNCIÓN MORIR ---
@@ -151,7 +163,7 @@ func curar():
 
 # --- TERMINAR NIVEL ---
 func finalizar_nivel():
-	print("Nivel completado 🎉")
+	print("Nivel completado")
 	await get_tree().create_timer(0.5).timeout
 	# Cambia a tu siguiente escena:
 	#get_tree().change_scene_to_file("res://next_level.tscn")

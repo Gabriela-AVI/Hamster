@@ -1,7 +1,7 @@
 [gd_scene load_steps=61 format=3 uid="uid://io67g1edo47j"]
 
 [ext_resource type="Texture2D" uid="uid://cy7jc7ev5awp3" path="res://assets/hamstersheet.png" id="1_3vyb7"]
-[ext_resource type="Script" uid="uid://drkc0ff63hxo2" path="res://characters_elements/player.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://drkc0ff63hxo2" path="res://characters/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://cvmpfmf6ijrhe" path="res://assets/HusterRollAnimationpng.png" id="3_g1dw6"]
 [ext_resource type="AudioStream" uid="uid://c8esjudu0gy03" path="res://music/AudioDamage.ogg" id="4_q14xx"]
 
