@@ -187,11 +187,11 @@ position = Vector2(1724, 77.5)
 shape = SubResource("RectangleShape2D_t4bav")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_fdxsg")]
-position = Vector2(-360, -54)
+position = Vector2(-348, -23)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("objeto_a_seguir")]
 position = Vector2(-351, -29)
-zoom = Vector2(0.8, 0.8)
+zoom = Vector2(0.9, 0.9)
 limit_top = -9999996
 limit_right = 9999999
 limit_smoothed = true

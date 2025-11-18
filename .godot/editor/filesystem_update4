@@ -1,7 +1,0 @@
-res://scenes/Game1.tscn
-res://characters/enemy.gd
-res://scripts/camera2D.gd
-res://characters/enemy.tscn
-res://scenes/prueba.tscn
-res://characters/player.tscn
-res://characters/player.gd
