@@ -3,7 +3,7 @@
 icon.svg::CompressedTexture2D::8808989235190531035::1762550529::1762886102::1::::<><><>0<>0<>46d28227b94c78aa47f499ec04016249<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 pruebas_parallax.tscn::PackedScene::1632400964745541852::1763138557::0::1::::<><><>0<>0<><>::uid://cdiuddt2aqr6w::::res://scenes/script_parallax_background.gd<>uid://c1rht70so1gia::::res://assets/MountainsLayer/sky.png<>uid://j16vr8nx42km::::res://assets/MountainsLayer/far-mountains.png<>uid://ba63ohpk6656j::::res://assets/MountainsLayer/mountains.png<>uid://bqlgxf1di168i::::res://assets/MountainsLayer/trees.png
 README.md::TextFile::-1::1762550529::0::1::::<><><>0<>0<><>::
-::res://assets/::1763405572
+::res://assets/::1763505392
 background1.png::CompressedTexture2D::6481419785538051771::1762809812::1762809813::1::::<><><>0<>0<>c144e966884c71bcb2d0469937db3f5c<>res://.godot/imported/background1.png-a44d78bededebe7a201c901af9d9ce13.ctex::
 box.png::CompressedTexture2D::2811983565520878422::1763405572::1763405572::1::::<><><>0<>0<>27242e2611d210d64a336981251b8f26<>res://.godot/imported/box.png-52cc4e41fddadef836f9ad4dbe7936fa.ctex::
 hamstersheet.png::CompressedTexture2D::6523985415272282354::1762550692::1762550860::1::::<><><>0<>0<>ff195bdb7f414e254b8ff781f8121505<>res://.godot/imported/hamstersheet.png-fee795a1bb17306b9dc20afbef8acc9b.ctex::
@@ -15,7 +15,7 @@ pinchos.png::CompressedTexture2D::448090891571403185::1763206550::1763207303::1:
 pipa_sprite_sheet.png::CompressedTexture2D::9138600673591127517::1762726161::1762726161::1::::<><><>0<>0<>c1a9279f0140ed32c0a6d84573d04837<>res://.godot/imported/pipa_sprite_sheet.png-24e390a01b363f11d33947377e242880.ctex::
 Rat-DarkGrey-Walk.png::CompressedTexture2D::1462799976896006507::1763143727::1763143727::1::::<><><>0<>0<>3f16719561fb221fa31e07f9e58ba053<>res://.godot/imported/Rat-DarkGrey-Walk.png-aa930a824deb85503d6fea286853a88a.ctex::
 señal.png::CompressedTexture2D::8076063845611919676::1763230365::1763230365::1::::<><><>0<>0<>ed87f585951797b2e0b54d5cfa482aa1<>res://.godot/imported/señal.png-a8e5b9efc19befc77953d117b4f17a3d.ctex::
-tilemap_packed.png::CompressedTexture2D::6788041113086191651::1762886085::1762886102::1::::<><><>0<>0<>7388fd79c1a4fde26d5c1476fb3c8bcd<>res://.godot/imported/tilemap_packed.png-bc35c6a04993103d475a218761ed55b4.ctex::
+tilemap_packed.png::CompressedTexture2D::6201423328221175130::1763505390::1763505395::1::::<><><>0<>0<>90171f1c9e7eb2ec2ea1a80afbee1c74<>res://.godot/imported/tilemap_packed.png-bc35c6a04993103d475a218761ed55b4.ctex::
 ::res://assets/MountainsLayer/::1762886102
 far-clouds.png::CompressedTexture2D::8324171993196423411::1762886085::1762886102::1::::<><><>0<>0<>e899060367f5f1149f49bba1593ad613<>res://.godot/imported/far-clouds.png-5d7ca3d70e2d84a44aa850a73c474ef0.ctex::
 far-mountains.png::CompressedTexture2D::687294087293674628::1762886085::1762886102::1::::<><><>0<>0<>55e53a26c860c9cd124ae98b24e9406c<>res://.godot/imported/far-mountains.png-ad737c2c8e1459f828fefe849563764f.ctex::
@@ -36,9 +36,9 @@ pipe.gd::GDScript::3519958815614920475::1763146723::0::1::::<>Area2D<><>0<>0<><>
 pipe.tscn::PackedScene::6882390210936162735::1763405817::0::1::::<><><>0<>0<><>::uid://d3g2oheh6110d::::res://assets/pipa_sprite_sheet.png<>uid://bqfdhb1p3d7c6::::res://elements/pipe.gd
 ::res://music/::1763405808
 AudioDamage.ogg::AudioStreamOggVorbis::7098440752516247758::1763242935::1763405808::1::::<><><>0<>0<>f978f0a01d1ee416b7f50b8abc43cae7<>res://.godot/imported/AudioDamage.ogg-c3a79b32ca7f0a108d252bf9590210e2.oggvorbisstr::
-::res://scenes/::1763499258
+::res://scenes/::1763505320
 door_area.gd::GDScript::6512412631767163259::1763404495::0::1::::<>Area2D<><>0<>0<><>::
-Game1.tscn::PackedScene::8502627092442402755::1763499258::0::1::::<><><>0<>0<><>::uid://io67g1edo47j::::res://characters/player.tscn<>uid://c3ygbsp5xy4lj::::res://assets/tilemap_packed.png<>uid://c5b47xg0npppn::::res://elements/pipe.tscn<>uid://dncdud5veafu7::::res://assets/señal.png<>uid://cy1wqqfsc4myt::::res://scenes/door_area.gd<>uid://cc00wiv84g16k::::res://scripts/camera2D.gd<>uid://b1blv0vujrs7k::::res://elements/heart.tscn<>uid://daym55ln1fq3w::::res://elements/box.tscn<>uid://w443o58jw87e::::res://characters/enemy.tscn
+Game1.tscn::PackedScene::8502627092442402755::1763505320::0::1::::<><><>0<>0<><>::uid://io67g1edo47j::::res://characters/player.tscn<>uid://cumash248k1fi::::res://assets/tilemap_packed.png<>uid://c5b47xg0npppn::::res://elements/pipe.tscn<>uid://dncdud5veafu7::::res://assets/señal.png<>uid://cy1wqqfsc4myt::::res://scenes/door_area.gd<>uid://cc00wiv84g16k::::res://scripts/camera2D.gd<>uid://b1blv0vujrs7k::::res://elements/heart.tscn<>uid://daym55ln1fq3w::::res://elements/box.tscn<>uid://w443o58jw87e::::res://characters/enemy.tscn
 prueba.tscn::PackedScene::6808406535190505550::1763494480::0::1::::<><><>0<>0<><>::uid://dncdud5veafu7::::res://assets/señal.png<>uid://c3ygbsp5xy4lj::::res://assets/tilemap_packed.png<>uid://cy1wqqfsc4myt::::res://scenes/door_area.gd<>uid://io67g1edo47j::::res://characters/player.tscn<>uid://cc00wiv84g16k::::res://scripts/camera2D.gd<>uid://w443o58jw87e::::res://characters/enemy.tscn<>uid://daym55ln1fq3w::::res://elements/box.tscn<>uid://c5b47xg0npppn::::res://elements/pipe.tscn<>uid://b1blv0vujrs7k::::res://elements/heart.tscn
 ::res://scenes/maps/::1763405832
 nivel_prueba.tscn::PackedScene::9197708790174319906::1763405832::0::1::::<><><>0<>0<><>::uid://io67g1edo47j::::res://characters/player.tscn<>uid://7xsme07w8gfy::::res://scenes/maps/prueba.tscn<>uid://ci3ykv8hj15lp::::res://scripts/controller.gd
