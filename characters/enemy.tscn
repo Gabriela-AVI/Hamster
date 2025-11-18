@@ -36,7 +36,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"enemy",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wujgv"]
@@ -54,7 +54,7 @@ texture_filter = 1
 position = Vector2(-2.5, -10.5)
 sprite_frames = SubResource("SpriteFrames_3yqyl")
 animation = &"enemy"
-frame_progress = 0.90057683
+frame_progress = 0.45378652
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 texture_filter = 1

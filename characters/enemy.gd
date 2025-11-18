@@ -5,9 +5,9 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 
-func _ready() -> void:
+#func _ready() -> void:
 	
 	
 	# --- GRAVEDAD ---
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+	#if not is_on_floor():
+		#velocity += get_gravity() * delta

@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=4 uid="uid://dte0a5aprinvv"]
+[gd_scene load_steps=13 format=4 uid="uid://dte0a5aprinvv"]
 
 [ext_resource type="PackedScene" uid="uid://io67g1edo47j" path="res://characters/player.tscn" id="1_fdxsg"]
 [ext_resource type="Texture2D" uid="uid://c3ygbsp5xy4lj" path="res://assets/tilemap_packed.png" id="1_mua0o"]
 [ext_resource type="PackedScene" uid="uid://c5b47xg0npppn" path="res://elements/pipe.tscn" id="2_fdxsg"]
 [ext_resource type="Texture2D" uid="uid://dncdud5veafu7" path="res://assets/señal.png" id="2_mcjy6"]
 [ext_resource type="Script" uid="uid://cy1wqqfsc4myt" path="res://scenes/door_area.gd" id="3_16hu5"]
+[ext_resource type="Script" uid="uid://cc00wiv84g16k" path="res://scripts/camera2D.gd" id="5_8xv86"]
 [ext_resource type="PackedScene" uid="uid://b1blv0vujrs7k" path="res://elements/heart.tscn" id="5_mcjy6"]
 [ext_resource type="PackedScene" uid="uid://daym55ln1fq3w" path="res://elements/box.tscn" id="5_t4bav"]
 [ext_resource type="PackedScene" uid="uid://w443o58jw87e" path="res://characters/enemy.tscn" id="8_y3wct"]
@@ -186,16 +187,18 @@ position = Vector2(1724, 77.5)
 shape = SubResource("RectangleShape2D_t4bav")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_fdxsg")]
-position = Vector2(903, 120)
+position = Vector2(-360, -54)
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(9, 25)
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("objeto_a_seguir")]
+position = Vector2(-351, -29)
 zoom = Vector2(0.8, 0.8)
 limit_top = -9999996
 limit_right = 9999999
 limit_smoothed = true
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
+script = ExtResource("5_8xv86")
+objeto_a_seguir = NodePath("../CharacterBody2D")
 
 [node name="enemy" parent="." instance=ExtResource("8_y3wct")]
 position = Vector2(851, 132)
