@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://w443o58jw87e"]
+[gd_scene load_steps=11 format=3 uid="uid://w443o58jw87e"]
 
 [ext_resource type="Script" uid="uid://03wgml8qp5cn" path="res://characters/enemy.gd" id="1_nhupr"]
 [ext_resource type="Texture2D" uid="uid://u3udp2e7eg8r" path="res://assets/Rat-DarkGrey-Walk.png" id="1_wa0eo"]
@@ -43,7 +43,10 @@ animations = [{
 size = Vector2(24, 10.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nhupr"]
-size = Vector2(23.5, 11)
+size = Vector2(23.75, 10.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ohc2"]
+size = Vector2(223.5, 29.25)
 
 [node name="enemy" type="CharacterBody2D"]
 scale = Vector2(2, 2)
@@ -54,21 +57,25 @@ texture_filter = 1
 position = Vector2(-2.5, -10.5)
 sprite_frames = SubResource("SpriteFrames_3yqyl")
 animation = &"enemy"
-frame_progress = 0.45378652
+frame_progress = 0.45471314
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 texture_filter = 1
 position = Vector2(1.5, -0.75)
 shape = SubResource("RectangleShape2D_wujgv")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D_Collision" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1.75, -0.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Collision"]
+position = Vector2(1.625, -0.75)
 shape = SubResource("RectangleShape2D_nhupr")
 
-[node name="RayCast2D_front" type="RayCast2D" parent="."]
-target_position = Vector2(53, 0)
+[node name="Area2D_Detection" type="Area2D" parent="."]
 
-[node name="RayCast2D_back" type="RayCast2D" parent="."]
-target_position = Vector2(-32, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Detection"]
+position = Vector2(-0.25, -9.875)
+shape = SubResource("RectangleShape2D_1ohc2")
+debug_color = Color(0.8454864, 0, 0.25147897, 0.41960785)
+
+[connection signal="body_entered" from="Area2D_Detection" to="." method="_on_area_2d_detection_body_entered"]
+[connection signal="body_exited" from="Area2D_Detection" to="." method="_on_area_2d_detection_body_exited"]

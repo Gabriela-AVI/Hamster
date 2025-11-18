@@ -23,6 +23,11 @@ var vida = 1
 var puerta_area: Node = null
 
 
+
+
+func _ready():
+	add_to_group("player")
+
 func _physics_process(delta: float) -> void:
 
 	# --- TIMERS DEL DASH ---
