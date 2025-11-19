@@ -272,7 +272,7 @@ sources/0 = SubResource("TileSetAtlasSource_mua0o")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4bav"]
 size = Vector2(68, 53)
 
-[node name="Game1" type="Node2D"]
+[node name="Game3" type="Node2D"]
 
 [node name="Señal" type="Sprite2D" parent="."]
 texture_filter = 1
