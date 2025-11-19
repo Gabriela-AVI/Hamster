@@ -138,22 +138,35 @@ func recoger_moneda():
 	print("DEBUG → Monedas recogidas: ", monedas)
 
 
-# --- DAÑO ---
+#--- DAÑO por pinchos---
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	vida -= 1
 	$AudioDamage.play()
-
 	print("DEBUG → Vida actual: ", vida)
+	if vida <= 0:
+		morir()
+
+
+# --- DAÑO por enemy
+func recibir_daño(cantidad):
+	if vida <= 0:
+		return
+
+	vida -= cantidad
+	print("DEBUG → Vida actual: ", vida)
+
+	$AudioDamage.play()
 
 	if vida <= 0:
 		morir()
+
+
 
 
 # --- DETECTAR ENTRADA EN PUERTA ---
 func _on_door_area_body_entered(body):
 	if body == self:
 		puerta_area = get_parent().get_node("DoorArea")
-
 
 # --- DETECTAR SALIDA DE LA PUERTA ---
 func _on_door_area_body_exited(body):

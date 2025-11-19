@@ -295,7 +295,7 @@ position = Vector2(1724, 77.5)
 shape = SubResource("RectangleShape2D_t4bav")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_2imc6")]
-position = Vector2(-383, -81)
+position = Vector2(-456, -236)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("objeto_a_seguir")]
 position = Vector2(-351, -29)
@@ -313,16 +313,16 @@ position = Vector2(851, 132)
 scale = Vector2(1.5, 1.5)
 
 [node name="RigidBody2D" parent="." instance=ExtResource("7_06pev")]
-position = Vector2(547, 104)
+position = Vector2(397, -15)
 
 [node name="pipe" parent="." instance=ExtResource("8_efwou")]
-position = Vector2(2, -118)
+position = Vector2(-100, -97)
 
 [node name="pipe2" parent="." instance=ExtResource("8_efwou")]
 position = Vector2(-491, -113)
 
 [node name="pipe3" parent="." instance=ExtResource("8_efwou")]
-position = Vector2(203, 67)
+position = Vector2(-37, 95)
 
 [node name="pipe4" parent="." instance=ExtResource("8_efwou")]
 position = Vector2(791, 105)
@@ -337,7 +337,7 @@ position = Vector2(1226, 82)
 position = Vector2(1412, 86)
 
 [node name="heart" parent="." instance=ExtResource("9_av3nd")]
-position = Vector2(478, -9)
+position = Vector2(304, -27)
 
 [connection signal="body_entered" from="DoorArea" to="CharacterBody2D" method="_on_door_area_body_entered"]
 [connection signal="body_exited" from="DoorArea" to="CharacterBody2D" method="_on_door_area_body_exited"]
