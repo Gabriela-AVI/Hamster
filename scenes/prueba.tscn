@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=4 uid="uid://c4abpw205p62e"]
 
 [ext_resource type="Texture2D" uid="uid://dncdud5veafu7" path="res://assets/señal.png" id="1_wawj5"]
-[ext_resource type="Texture2D" uid="uid://c3ygbsp5xy4lj" path="res://assets/tilemap_packed.png" id="2_0j6g7"]
+[ext_resource type="Texture2D" uid="uid://cumash248k1fi" path="res://assets/tilemap_packed.png" id="2_0j6g7"]
 [ext_resource type="Script" uid="uid://cy1wqqfsc4myt" path="res://scenes/door_area.gd" id="3_6wumb"]
 [ext_resource type="PackedScene" uid="uid://io67g1edo47j" path="res://characters/player.tscn" id="4_tl1fn"]
 [ext_resource type="Script" uid="uid://cc00wiv84g16k" path="res://scripts/camera2D.gd" id="5_5em8h"]
