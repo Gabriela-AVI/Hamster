@@ -163,8 +163,6 @@ func recibir_daño(cantidad):
 		morir()
 
 
-
-
 # --- DETECTAR ENTRADA EN PUERTA ---
 func _on_door_area_body_entered(body):
 	if body == self:
