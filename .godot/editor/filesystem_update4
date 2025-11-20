@@ -1,6 +1,4 @@
-res://scenes/Game3.tscn
-res://characters/enemy.tscn
-res://characters/enemy.gd
 res://scenes/Game2.tscn
-res://characters/player.tscn
+res://scenes/Game3.tscn
+res://scenes/prueba.tscn
 res://characters/player.gd

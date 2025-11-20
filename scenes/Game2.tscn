@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://dte0a5aprinvv"]
+[gd_scene load_steps=16 format=4 uid="uid://dte0a5aprinvv"]
 
 [ext_resource type="Texture2D" uid="uid://du0ekktrcbrgq" path="res://background_0.png" id="1_6slyv"]
 [ext_resource type="PackedScene" uid="uid://io67g1edo47j" path="res://characters/player.tscn" id="1_fdxsg"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://dncdud5veafu7" path="res://assets/señal.png" id="2_mcjy6"]
 [ext_resource type="Script" uid="uid://cy1wqqfsc4myt" path="res://scenes/door_area.gd" id="3_16hu5"]
 [ext_resource type="Texture2D" uid="uid://cf1prhdtdx3vp" path="res://background_1-export.png" id="3_cr3rr"]
-[ext_resource type="Texture2D" uid="uid://behsem7oxbvw8" path="res://background_2-export.png" id="4_a1tbd"]
 [ext_resource type="Script" uid="uid://cc00wiv84g16k" path="res://scripts/camera2D.gd" id="5_8xv86"]
 [ext_resource type="PackedScene" uid="uid://b1blv0vujrs7k" path="res://elements/heart.tscn" id="5_mcjy6"]
 [ext_resource type="PackedScene" uid="uid://daym55ln1fq3w" path="res://elements/box.tscn" id="5_t4bav"]
@@ -257,7 +256,7 @@ size = Vector2(68, 53)
 [node name="Background0" type="Sprite2D" parent="."]
 texture_filter = 1
 texture_repeat = 3
-position = Vector2(185, -124)
+position = Vector2(184.00002, -110)
 scale = Vector2(1.0486112, 1.05)
 texture = ExtResource("1_6slyv")
 region_enabled = true
@@ -275,18 +274,6 @@ region_enabled = true
 region_rect = Rect2(0, 0, 5000, 5000)
 script = ExtResource("2_a58ko")
 speed = 10.0
-
-[node name="Background2" type="Sprite2D" parent="."]
-visible = false
-texture_filter = 1
-texture_repeat = 3
-position = Vector2(185, -124)
-scale = Vector2(1.0486112, 1.05)
-texture = ExtResource("4_a1tbd")
-region_enabled = true
-region_rect = Rect2(0, 0, 5000, 5000)
-script = ExtResource("2_a58ko")
-speed = 15.0
 
 [node name="Señal" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -308,11 +295,11 @@ tilemap = NodePath("../TileMapLayer")
 position = Vector2(1724, 77.5)
 shape = SubResource("RectangleShape2D_t4bav")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_fdxsg")]
+[node name="player" parent="." instance=ExtResource("1_fdxsg")]
 position = Vector2(-350, -43)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("objeto_a_seguir")]
-position = Vector2(-345, -41)
+position = Vector2(-341, -34)
 zoom = Vector2(0.9, 0.9)
 limit_top = -9999996
 limit_right = 9999999
@@ -320,7 +307,7 @@ limit_smoothed = true
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 script = ExtResource("5_8xv86")
-objeto_a_seguir = NodePath("../CharacterBody2D")
+objeto_a_seguir = NodePath("../player")
 
 [node name="enemy" parent="." instance=ExtResource("8_y3wct")]
 position = Vector2(851, 132)
@@ -353,5 +340,5 @@ position = Vector2(1412, 86)
 [node name="heart" parent="." instance=ExtResource("5_mcjy6")]
 position = Vector2(478, -9)
 
-[connection signal="body_entered" from="DoorArea" to="CharacterBody2D" method="_on_door_area_body_entered"]
-[connection signal="body_exited" from="DoorArea" to="CharacterBody2D" method="_on_door_area_body_exited"]
+[connection signal="body_entered" from="DoorArea" to="player" method="_on_door_area_body_entered"]
+[connection signal="body_exited" from="DoorArea" to="player" method="_on_door_area_body_exited"]

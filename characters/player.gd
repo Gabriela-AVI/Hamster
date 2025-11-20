@@ -24,12 +24,11 @@ var puerta_area: Node = null
 
 
 
-
 func _ready():
 	add_to_group("player")
 
 func _physics_process(delta: float) -> void:
-
+		
 	# --- TIMERS DEL DASH ---
 	if dash_cooldown_timer > 0:
 		dash_cooldown_timer -= delta
@@ -81,13 +80,17 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-
 	# --- USAR PUERTA (E) ---
 	if Input.is_action_just_pressed("interact") and puerta_area != null:
 		puerta_area.abrir_puerta()
 		finalizar_nivel()
-		print("estoy muerta")
-
+		$AnimatedSprite2D.play("run")
+		
+ # Reiniciar si cae al vacío ---
+	if global_position.y > 600:
+		$AnimatedSprite2D.play("die")
+		get_tree().reload_current_scene()
+		
 
 # --- FUNCIÓN DASH ---
 func start_dash(direction):
@@ -151,10 +154,9 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func recibir_daño(cantidad):
 	if vida <= 0:
 		return
-
 	vida -= cantidad
 	print("DEBUG → Vida actual: ", vida)
-
+	
 	$AudioDamage.play()
 
 	if vida <= 0:
