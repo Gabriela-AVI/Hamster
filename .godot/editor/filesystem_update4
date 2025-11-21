@@ -1,1 +1,9 @@
 res://characters/enemy_2.tscn
+res://menu/MainMenu.tscn
+res://menu/MenuControl.gd
+res://menu/LevelStatsCreator.gd
+res://menu/PlayersLoader.gd
+res://menu/LevelStatEntry.tscn
+res://menu/menuText.tres
+res://scenes/Game2.tscn
+res://scenes/Game3.tscn

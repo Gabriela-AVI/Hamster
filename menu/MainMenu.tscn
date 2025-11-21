@@ -1,0 +1,302 @@
+[gd_scene load_steps=13 format=3 uid="uid://b7jvrngmru8nd"]
+
+[ext_resource type="Script" uid="uid://dthrtmx4435q6" path="res://menu/MenuControl.gd" id="1_rbtx8"]
+[ext_resource type="LabelSettings" uid="uid://clglqaok7gfnk" path="res://menu/menuText.tres" id="2_kh61s"]
+[ext_resource type="Script" uid="uid://d3daclqgnygjb" path="res://menu/LevelStatsCreator.gd" id="2_wn5o1"]
+[ext_resource type="PackedScene" uid="uid://bha0xpls50hyc" path="res://menu/LevelStatEntry.tscn" id="3_kh61s"]
+[ext_resource type="FontFile" uid="uid://dvkg6fga4w38" path="res://menu/FreePixel.ttf" id="5_kh61s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ytr4m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ouk20"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mae5d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4hy44"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iwfq2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mae5d"]
+font = ExtResource("5_kh61s")
+font_size = 48
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l48gv"]
+
+[node name="node" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rbtx8")
+
+[node name="UserNamePanel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -7.5
+offset_top = 10.0
+offset_right = -7.5
+offset_bottom = 10.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ytr4m")
+
+[node name="UserNameLabel" type="Label" parent="Control/UserNamePanel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "Jugador"
+label_settings = ExtResource("2_kh61s")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="InfoPanel" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 10.0
+offset_top = 10.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="CreatorLabel" type="Label" parent="Control/InfoPanel"]
+layout_mode = 2
+text = "G.A.V.I."
+label_settings = ExtResource("2_kh61s")
+vertical_alignment = 2
+
+[node name="MainPanel" type="VBoxContainer" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 25.0
+offset_top = -180.0
+offset_right = 475.0
+offset_bottom = 180.0
+grow_vertical = 2
+
+[node name="PlayButton" type="Button" parent="Control/MainPanel"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_kh61s")
+theme_override_font_sizes/font_size = 86
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ouk20")
+text = "Jugar"
+
+[node name="StatsButton" type="Button" parent="Control/MainPanel"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_kh61s")
+theme_override_font_sizes/font_size = 86
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ouk20")
+text = "Podio"
+
+[node name="SettingsButton" type="Button" parent="Control/MainPanel"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_kh61s")
+theme_override_font_sizes/font_size = 86
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ouk20")
+text = "Opciones"
+
+[node name="ExitButton" type="Button" parent="Control/MainPanel"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_kh61s")
+theme_override_font_sizes/font_size = 86
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ouk20")
+text = "Salir"
+
+[node name="LevelsPanel" type="PanelContainer" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mae5d")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/LevelsPanel"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 20
+
+[node name="ButtonLvl1" type="Button" parent="Control/LevelsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_kh61s")
+theme_override_font_sizes/font_size = 64
+text = "Nivel 1"
+
+[node name="ButtonLvl2" type="Button" parent="Control/LevelsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_kh61s")
+theme_override_font_sizes/font_size = 64
+text = "Nivel 2"
+
+[node name="ButtonLvl3" type="Button" parent="Control/LevelsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_kh61s")
+theme_override_font_sizes/font_size = 64
+text = "Nivel 3"
+
+[node name="Panel" type="Panel" parent="Control/LevelsPanel"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="BackButton" type="Button" parent="Control/LevelsPanel/Panel"]
+layout_mode = 0
+offset_top = -64.0
+offset_right = 150.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("5_kh61s")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4hy44")
+text = "Atrás"
+
+[node name="StatsPanel" type="PanelContainer" parent="Control" node_paths=PackedStringArray("list_container", "sync_button")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mae5d")
+script = ExtResource("2_wn5o1")
+entry_prefab = ExtResource("3_kh61s")
+list_container = NodePath("VBoxContainer2/VBoxContainer")
+sync_button = NodePath("Panel/SyncButton")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/StatsPanel"]
+layout_mode = 2
+
+[node name="LevelStatEntry" parent="Control/StatsPanel/VBoxContainer2" instance=ExtResource("3_kh61s")]
+layout_mode = 2
+script = null
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/StatsPanel/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Panel" type="HBoxContainer" parent="Control/StatsPanel"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/separation = 100
+
+[node name="BackButton" type="Button" parent="Control/StatsPanel/Panel"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("5_kh61s")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4hy44")
+text = "Atrás"
+
+[node name="SyncButton" type="Button" parent="Control/StatsPanel/Panel"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_kh61s")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxEmpty_iwfq2")
+text = "Enviar datos"
+
+[node name="SettingsPanel" type="PanelContainer" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mae5d")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/SettingsPanel"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/SettingsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="Control/SettingsPanel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Nombre: "
+label_settings = SubResource("LabelSettings_mae5d")
+
+[node name="NameInput" type="LineEdit" parent="Control/SettingsPanel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 36
+
+[node name="Apply" type="Button" parent="Control/SettingsPanel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_kh61s")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l48gv")
+text = "Hecho"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/SettingsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="Control/SettingsPanel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Fullscreen mode: "
+label_settings = SubResource("LabelSettings_mae5d")
+
+[node name="FullscreenButton" type="Button" parent="Control/SettingsPanel/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_kh61s")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l48gv")
+text = "OFF
+"
+
+[node name="Panel" type="Panel" parent="Control/SettingsPanel"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="BackButton" type="Button" parent="Control/SettingsPanel/Panel"]
+layout_mode = 0
+offset_top = -64.0
+offset_right = 150.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("5_kh61s")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4hy44")
+text = "Atrás"

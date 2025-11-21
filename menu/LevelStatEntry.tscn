@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://bha0xpls50hyc"]
+
+[ext_resource type="Script" uid="uid://dnqeqcldexr3a" path="res://menu/LevelStatEntry.gd" id="1_pgcoy"]
+[ext_resource type="LabelSettings" uid="uid://clglqaok7gfnk" path="res://menu/menuText.tres" id="2_oe1ee"]
+
+[node name="LevelStatEntry" type="HBoxContainer" node_paths=PackedStringArray("label_rank", "label_name", "label_coins", "label_time")]
+theme_override_constants/separation = 25
+script = ExtResource("1_pgcoy")
+label_rank = NodePath("LabelRank")
+label_name = NodePath("LabelName")
+label_coins = NodePath("LabelCoins")
+label_time = NodePath("LabelTime")
+
+[node name="LabelRank" type="Label" parent="."]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Podio"
+label_settings = ExtResource("2_oe1ee")
+horizontal_alignment = 1
+
+[node name="LabelName" type="Label" parent="."]
+custom_minimum_size = Vector2(450, 0)
+layout_mode = 2
+text = "Jugador"
+label_settings = ExtResource("2_oe1ee")
+horizontal_alignment = 1
+
+[node name="LabelCoins" type="Label" parent="."]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Pipas"
+label_settings = ExtResource("2_oe1ee")
+horizontal_alignment = 1
+
+[node name="LabelTime" type="Label" parent="."]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Tiempo"
+label_settings = ExtResource("2_oe1ee")
+horizontal_alignment = 1

@@ -324,7 +324,7 @@ position = Vector2(-456, -236)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("objeto_a_seguir")]
 position = Vector2(-351, -29)
-zoom = Vector2(0.9, 0.9)
+zoom = Vector2(2.2, 2.2)
 limit_top = -9999996
 limit_right = 9999999
 limit_smoothed = true
