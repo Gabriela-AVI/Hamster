@@ -1,9 +1,9 @@
 CollisionShape2D
+Area2D
 Sprite2D
 AnimatableBody2D
 Node
 AnimationPlayer
-Area2D
 AnimatedSprite2D
 CharacterBody2D
 RayCast2D

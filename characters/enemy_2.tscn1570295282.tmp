@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dcau4do0lupfj"]
+[gd_scene load_steps=26 format=3 uid="uid://dcau4do0lupfj"]
 
 [ext_resource type="Script" uid="uid://cqfdndq16eb2r" path="res://characters/enemy_2.gd" id="1_aqswa"]
 [ext_resource type="Texture2D" uid="uid://ctkyiopexjnxa" path="res://assets/bee_asset.png" id="1_vw0k1"]
@@ -111,7 +111,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_7wxrj")
 }],
 "loop": false,
-"name": &"attack",
+"name": &"atack",
 "speed": 13.0
 }, {
 "frames": [{
@@ -162,24 +162,20 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cx84u"]
-radius = 50.01
+radius = 58.694122
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqswa"]
-size = Vector2(777, 1228)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_aqswa"]
-radius = 70.00714
+size = Vector2(777, 667.5)
 
 [node name="enemy_2" type="CharacterBody2D"]
-collision_layer = 0
-collision_mask = 0
 script = ExtResource("1_aqswa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_4hrps")
-animation = &"attack"
+animation = &"fly"
+frame_progress = 0.31879258
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(7, 3)
@@ -188,17 +184,8 @@ shape = SubResource("CircleShape2D_cx84u")
 [node name="Area2D_Detection" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Detection"]
-position = Vector2(85.5, 1)
+position = Vector2(85.5, -279.25)
 shape = SubResource("RectangleShape2D_aqswa")
 debug_color = Color(0.07475465, 0.6305356, 0.45265806, 0.41960785)
 
-[node name="Area2D_Collision" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Collision"]
-position = Vector2(8, 4)
-shape = SubResource("CircleShape2D_aqswa")
-debug_color = Color(0.8991525, 0.17668426, 0.64321995, 0.41960785)
-
-[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Area2D_Detection" to="." method="_on_area_2d_detection_body_entered"]
-[connection signal="body_entered" from="Area2D_Collision" to="." method="_on_area_2d_collision_body_entered"]

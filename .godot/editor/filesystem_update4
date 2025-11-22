@@ -1,4 +1,5 @@
-res://scenes/Game2.tscn
 res://scenes/Game3.tscn
-res://characters/player.gd
-res://elements/bola.tscn
+res://characters/enemy_2.tscn
+res://characters/enemy_2.gd
+res://characters/enemy.tscn
+res://scripts/area_2d_safe.tscn

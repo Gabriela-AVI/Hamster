@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://b7re7mifmj0hn"]
+[gd_scene load_steps=22 format=4 uid="uid://b7re7mifmj0hn"]
 
 [ext_resource type="Texture2D" uid="uid://du0ekktrcbrgq" path="res://assets/background_0.png" id="1_2imc6"]
 [ext_resource type="Texture2D" uid="uid://dncdud5veafu7" path="res://assets/señal.png" id="1_53d70"]
@@ -15,7 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://b1blv0vujrs7k" path="res://elements/heart.tscn" id="9_av3nd"]
 [ext_resource type="AudioStream" uid="uid://b5qa3hhi6qljw" path="res://music/9-popsicle-cute-bgm-274660.mp3" id="13_qyugy"]
 [ext_resource type="PackedScene" uid="uid://bw7xuxnek0mnb" path="res://elements/bola.tscn" id="14_mrent"]
-[ext_resource type="PackedScene" uid="uid://x60mtaa2s88b" path="res://scripts/area_2d_safe.tscn" id="15_efwou"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mua0o"]
 texture = ExtResource("2_d2rpr")
@@ -364,7 +363,7 @@ script = ExtResource("3_i8wqy")
 tilemap = NodePath("../TileMapLayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorArea"]
-position = Vector2(4018, -45)
+position = Vector2(3501, -27)
 shape = SubResource("RectangleShape2D_t4bav")
 
 [node name="bola" parent="." instance=ExtResource("14_mrent")]
@@ -378,7 +377,7 @@ libraries = {
 autoplay = "move"
 
 [node name="player" parent="." instance=ExtResource("4_2imc6")]
-position = Vector2(1450, -12)
+position = Vector2(1454, 11)
 
 [node name="Colmena" type="Sprite2D" parent="."]
 position = Vector2(1339, 392)
@@ -441,9 +440,6 @@ position = Vector2(2878, -10)
 [node name="heart" parent="." instance=ExtResource("9_av3nd")]
 position = Vector2(411, 248)
 
-[node name="Area2D_SAFE" parent="." instance=ExtResource("15_efwou")]
-position = Vector2(3177, -56)
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_qyugy")
 autoplay = true
@@ -451,4 +447,3 @@ parameters/looping = true
 
 [connection signal="body_entered" from="DoorArea" to="player" method="_on_door_area_body_entered"]
 [connection signal="body_exited" from="DoorArea" to="player" method="_on_door_area_body_exited"]
-[connection signal="body_entered" from="Area2D_SAFE" to="enemy_2" method="_on_area_2d_safe_body_entered"]
