@@ -278,7 +278,7 @@ physics_layer_1/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_mua0o")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4bav"]
-size = Vector2(68, 53)
+size = Vector2(69, 53.5)
 
 [sub_resource type="Animation" id="Animation_06pev"]
 length = 0.001
@@ -373,7 +373,7 @@ script = ExtResource("3_i8wqy")
 tilemap = NodePath("../TileMapLayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorArea"]
-position = Vector2(3650, 41)
+position = Vector2(3649.5, 41.75)
 shape = SubResource("RectangleShape2D_t4bav")
 
 [node name="bola" parent="." instance=ExtResource("14_mrent")]
@@ -387,7 +387,7 @@ libraries = {
 autoplay = "move"
 
 [node name="player" parent="." instance=ExtResource("4_2imc6")]
-position = Vector2(2921, -3)
+position = Vector2(3582, 23)
 
 [node name="Colmena" type="Sprite2D" parent="."]
 position = Vector2(1339, 392)
