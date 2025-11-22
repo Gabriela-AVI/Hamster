@@ -1,5 +1,3 @@
 res://scenes/Game3.tscn
-res://characters/enemy_2.tscn
 res://characters/enemy_2.gd
-res://characters/enemy.tscn
-res://scripts/area_2d_safe.tscn
+res://elements/tree.tscn

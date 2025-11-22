@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 70.0
+const SPEED = 75.0
 
 enum State { IR_A, IR_B, PERSEGUIR, SAFE }
 var state = null
