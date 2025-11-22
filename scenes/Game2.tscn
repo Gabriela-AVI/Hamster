@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://dte0a5aprinvv"]
+[gd_scene load_steps=17 format=4 uid="uid://dte0a5aprinvv"]
 
 [ext_resource type="Texture2D" uid="uid://du0ekktrcbrgq" path="res://background_0.png" id="1_6slyv"]
 [ext_resource type="PackedScene" uid="uid://io67g1edo47j" path="res://characters/player.tscn" id="1_fdxsg"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://b1blv0vujrs7k" path="res://elements/heart.tscn" id="5_mcjy6"]
 [ext_resource type="PackedScene" uid="uid://daym55ln1fq3w" path="res://elements/box.tscn" id="5_t4bav"]
 [ext_resource type="PackedScene" uid="uid://w443o58jw87e" path="res://characters/enemy.tscn" id="8_y3wct"]
+[ext_resource type="AudioStream" uid="uid://bgdp8lk8dvrxa" path="res://music/music_1.mp3" id="13_cr3rr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mua0o"]
 texture = ExtResource("1_mua0o")
@@ -296,7 +297,7 @@ position = Vector2(1724, 77.5)
 shape = SubResource("RectangleShape2D_t4bav")
 
 [node name="player" parent="." instance=ExtResource("1_fdxsg")]
-position = Vector2(-350, -43)
+position = Vector2(1694, 50)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("objeto_a_seguir")]
 position = Vector2(-341, -34)
@@ -339,6 +340,10 @@ position = Vector2(1412, 86)
 
 [node name="heart" parent="." instance=ExtResource("5_mcjy6")]
 position = Vector2(478, -9)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_cr3rr")
+autoplay = true
 
 [connection signal="body_entered" from="DoorArea" to="player" method="_on_door_area_body_entered"]
 [connection signal="body_exited" from="DoorArea" to="player" method="_on_door_area_body_exited"]

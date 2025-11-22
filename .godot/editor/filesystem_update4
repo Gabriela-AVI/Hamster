@@ -7,3 +7,5 @@ res://menu/LevelStatEntry.tscn
 res://menu/menuText.tres
 res://scenes/Game2.tscn
 res://scenes/Game3.tscn
+res://characters/player.tscn
+res://characters/player.gd

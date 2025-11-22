@@ -145,6 +145,7 @@ func recoger_moneda():
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	vida -= 1
 	$AudioDamage.play()
+	
 	print("DEBUG → Vida actual: ", vida)
 	if vida <= 0:
 		morir()
@@ -178,11 +179,12 @@ func _on_door_area_body_exited(body):
 func curar():
 	curar_personaje.emit()
 
-
-# --- TERMINAR NIVEL ---
+# --- TERMINAR ---
 func finalizar_nivel():
-	print("Nivel completado")
-	await get_tree().create_timer(0.5).timeout
-	# Cambia a tu siguiente escena:
-	#get_tree().change_scene_to_file("res://next_level.tscn")
-	get_tree().quit()  # Temporal si no tienes siguiente nivel
+	process_mode = Node.PROCESS_MODE_ALWAYS
+
+	$AudioDoor.play()
+	$AnimatedSprite2D.play("stop")
+	await get_tree().create_timer(4.0).timeout
+
+	get_tree().quit()
