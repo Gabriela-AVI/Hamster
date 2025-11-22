@@ -298,7 +298,7 @@ position = Vector2(1724, 77.5)
 shape = SubResource("RectangleShape2D_t4bav")
 
 [node name="player" parent="." instance=ExtResource("1_fdxsg")]
-position = Vector2(1646, 86)
+position = Vector2(-347, -71)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("objeto_a_seguir")]
 position = Vector2(-341, -34)

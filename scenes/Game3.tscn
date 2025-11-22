@@ -388,7 +388,7 @@ libraries = {
 autoplay = "move"
 
 [node name="player" parent="." instance=ExtResource("4_2imc6")]
-position = Vector2(3582, 23)
+position = Vector2(-488, -240)
 
 [node name="Colmena" type="Sprite2D" parent="."]
 position = Vector2(1339, 392)

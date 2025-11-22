@@ -3,3 +3,4 @@ res://characters/enemy_2.gd
 res://elements/tree.tscn
 res://scenes/Game2.tscn
 res://scenes/door_area.gd
+res://scenes/Game1.tscn
