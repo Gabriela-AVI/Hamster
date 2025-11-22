@@ -1,3 +1,4 @@
 res://scenes/Game2.tscn
 res://scenes/Game3.tscn
 res://characters/player.gd
+res://elements/bola.tscn

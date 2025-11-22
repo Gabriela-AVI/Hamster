@@ -297,7 +297,7 @@ position = Vector2(1724, 77.5)
 shape = SubResource("RectangleShape2D_t4bav")
 
 [node name="player" parent="." instance=ExtResource("1_fdxsg")]
-position = Vector2(483, -7)
+position = Vector2(785, -42)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("objeto_a_seguir")]
 position = Vector2(-341, -34)
@@ -342,7 +342,7 @@ position = Vector2(1412, 86)
 position = Vector2(1785, -32)
 
 [node name="heart" parent="." instance=ExtResource("5_mcjy6")]
-position = Vector2(478, -9)
+position = Vector2(474.00003, -8)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_cr3rr")

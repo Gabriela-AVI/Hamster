@@ -1,8 +1,10 @@
+AnimationPlayer
 CollisionShape2D
+Sprite2D
+AnimatableBody2D
 Area2D
 AnimatedSprite2D
 CharacterBody2D
-Sprite2D
 RayCast2D
 RigidBody2D
 AudioStreamPlayer2D
@@ -11,4 +13,3 @@ Node2D
 ParallaxLayer
 ParallaxBackground
 StaticBody2D
-Camera2D
