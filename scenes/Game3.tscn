@@ -1,17 +1,18 @@
-[gd_scene load_steps=16 format=4 uid="uid://b7re7mifmj0hn"]
+[gd_scene load_steps=17 format=4 uid="uid://b7re7mifmj0hn"]
 
-[ext_resource type="Texture2D" uid="uid://du0ekktrcbrgq" path="res://background_0.png" id="1_2imc6"]
+[ext_resource type="Texture2D" uid="uid://du0ekktrcbrgq" path="res://assets/background_0.png" id="1_2imc6"]
 [ext_resource type="Texture2D" uid="uid://dncdud5veafu7" path="res://assets/señal.png" id="1_53d70"]
 [ext_resource type="Texture2D" uid="uid://cumash248k1fi" path="res://assets/tilemap_packed.png" id="2_d2rpr"]
-[ext_resource type="Script" uid="uid://dwmepp6ov171y" path="res://clouds.gd" id="2_qyugy"]
+[ext_resource type="Script" uid="uid://dwmepp6ov171y" path="res://scripts/clouds.gd" id="2_qyugy"]
 [ext_resource type="Script" uid="uid://cy1wqqfsc4myt" path="res://scenes/door_area.gd" id="3_i8wqy"]
-[ext_resource type="Texture2D" uid="uid://cf1prhdtdx3vp" path="res://background_1-export.png" id="3_mrent"]
+[ext_resource type="Texture2D" uid="uid://cf1prhdtdx3vp" path="res://assets/background_1-export.png" id="3_mrent"]
 [ext_resource type="PackedScene" uid="uid://io67g1edo47j" path="res://characters/player.tscn" id="4_2imc6"]
 [ext_resource type="Script" uid="uid://cc00wiv84g16k" path="res://scripts/camera2D.gd" id="5_qyugy"]
 [ext_resource type="PackedScene" uid="uid://w443o58jw87e" path="res://characters/enemy.tscn" id="6_mrent"]
 [ext_resource type="PackedScene" uid="uid://daym55ln1fq3w" path="res://elements/box.tscn" id="7_06pev"]
 [ext_resource type="PackedScene" uid="uid://c5b47xg0npppn" path="res://elements/pipe.tscn" id="8_efwou"]
 [ext_resource type="PackedScene" uid="uid://b1blv0vujrs7k" path="res://elements/heart.tscn" id="9_av3nd"]
+[ext_resource type="AudioStream" uid="uid://b5qa3hhi6qljw" path="res://music/9-popsicle-cute-bgm-274660.mp3" id="13_qyugy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mua0o"]
 texture = ExtResource("2_d2rpr")
@@ -320,7 +321,7 @@ position = Vector2(1724, 77.5)
 shape = SubResource("RectangleShape2D_t4bav")
 
 [node name="player" parent="." instance=ExtResource("4_2imc6")]
-position = Vector2(-456, -236)
+position = Vector2(424, 0)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("objeto_a_seguir")]
 position = Vector2(-351, -29)
@@ -338,7 +339,7 @@ position = Vector2(851, 132)
 scale = Vector2(1.5, 1.5)
 
 [node name="RigidBody2D" parent="." instance=ExtResource("7_06pev")]
-position = Vector2(673, 38)
+position = Vector2(837, -31)
 
 [node name="pipe" parent="." instance=ExtResource("8_efwou")]
 position = Vector2(490, -21)
@@ -365,7 +366,9 @@ position = Vector2(1412, 86)
 position = Vector2(410, 233)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_qyugy")
 autoplay = true
+parameters/looping = true
 
 [connection signal="body_entered" from="DoorArea" to="player" method="_on_door_area_body_entered"]
 [connection signal="body_exited" from="DoorArea" to="player" method="_on_door_area_body_exited"]

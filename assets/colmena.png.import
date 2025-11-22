@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://behsem7oxbvw8"
-path="res://.godot/imported/background_2-export.png-6f7c7384925d0c26531057c929d33a9b.ctex"
+uid="uid://brd510ygo623n"
+path="res://.godot/imported/colmena.png-5be53a40530332e462fba67e80863fe6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://background_2-export.png"
-dest_files=["res://.godot/imported/background_2-export.png-6f7c7384925d0c26531057c929d33a9b.ctex"]
+source_file="res://assets/colmena.png"
+dest_files=["res://.godot/imported/colmena.png-5be53a40530332e462fba67e80863fe6.ctex"]
 
 [params]
 

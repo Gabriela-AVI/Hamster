@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-signal curar_personaje()
 
 const SPEED = 100.0
 const JUMP_VELOCITY = -250.0
@@ -23,21 +22,19 @@ var vida = 1
 var puerta_area: Node = null
 
 
-
 func _ready():
 	add_to_group("player")
 
 func _physics_process(delta: float) -> void:
-		
+
+
 	# --- TIMERS DEL DASH ---
 	if dash_cooldown_timer > 0:
 		dash_cooldown_timer -= delta
-
 	if is_dashing:
 		dash_timer -= delta
 		if dash_timer <= 0:
 			is_dashing = false
-
 		$AnimatedSprite2D.play("dash")
 		velocity.x = dash_direction * DASH_SPEED
 		# mover
@@ -64,6 +61,7 @@ func _physics_process(delta: float) -> void:
 		start_dash(direction)
 		return
 
+
 	# --- ANIMACIONES ---
 	if direction != 0:
 		velocity.x = direction * SPEED
@@ -77,35 +75,36 @@ func _physics_process(delta: float) -> void:
 		else:
 			$AnimatedSprite2D.play("idle")
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
 	move_and_slide()
+
 
 	# --- USAR PUERTA (E) ---
 	if Input.is_action_just_pressed("interact") and puerta_area != null:
 		puerta_area.abrir_puerta()
 		finalizar_nivel()
-		$AnimatedSprite2D.play("run")
-		
+		$AnimatedSprite2D.play("stop")
+
+
  # Reiniciar si cae al vacío ---
 	if global_position.y > 600:
 		$AnimatedSprite2D.play("die")
 		get_tree().reload_current_scene()
-		
+
+# End _physics_process ------------------------------------------------------
 
 # --- FUNCIÓN DASH ---
 func start_dash(direction):
 	is_dashing = true
 	dash_timer = DASH_TIME
 	dash_cooldown_timer = DASH_COOLDOWN
-
 	$AnimatedSprite2D.play("dash")
 	_push_bodies()
-
 	if direction == 0:
 		dash_direction = -1 if $AnimatedSprite2D.flip_h else 1
 	else:
 		dash_direction = direction
-		
+
+
 # -- EMPUJAR CAJA --
 func _push_bodies():
 	for i in range(get_slide_collision_count()):
@@ -124,7 +123,6 @@ func morir():
 	velocity = Vector2.ZERO
 	set_physics_process(false)
 	$AnimatedSprite2D.play("die")
-
 	await get_tree().create_timer(1.0).timeout
 	get_tree().reload_current_scene()
 
@@ -144,8 +142,8 @@ func recoger_moneda():
 #--- DAÑO por pinchos---
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	vida -= 1
+	$AnimatedSprite2D.play("die")
 	$AudioDamage.play()
-	
 	print("DEBUG → Vida actual: ", vida)
 	if vida <= 0:
 		morir()
@@ -157,9 +155,8 @@ func recibir_daño(cantidad):
 		return
 	vida -= cantidad
 	print("DEBUG → Vida actual: ", vida)
-	
+	$AnimatedSprite2D.play("die")
 	$AudioDamage.play()
-
 	if vida <= 0:
 		morir()
 
@@ -175,16 +172,9 @@ func _on_door_area_body_exited(body):
 		puerta_area = null
 
 
-# --- CURAR ---
-func curar():
-	curar_personaje.emit()
-
 # --- TERMINAR ---
 func finalizar_nivel():
 	process_mode = Node.PROCESS_MODE_ALWAYS
-
 	$AudioDoor.play()
-	$AnimatedSprite2D.play("stop")
 	await get_tree().create_timer(4.0).timeout
-
 	get_tree().quit()
