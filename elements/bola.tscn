@@ -1,17 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://bw7xuxnek0mnb"]
 
-[ext_resource type="Texture2D" uid="uid://ddeaxvy5e1s2c" path="res://assets/bola.png" id="1_5t1a8"]
+[ext_resource type="Texture2D" uid="uid://dnjbq412harry" path="res://assets/bola2.png" id="1_5t1a8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5t1a8"]
-radius = 98.005104
+radius = 81.00617
 
 [node name="AnimatableBody2D" type="AnimatableBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-3.8146973e-06, 2)
-scale = Vector2(0.29577637, 0.29736322)
 texture = ExtResource("1_5t1a8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_5t1a8")

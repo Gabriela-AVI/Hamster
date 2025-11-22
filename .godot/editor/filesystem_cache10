@@ -2,19 +2,18 @@
 ::res://::1763817115
 icon.svg::CompressedTexture2D::8808989235190531035::1762550529::1763640238::1::::<><><>0<>0<>46d28227b94c78aa47f499ec04016249<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1762550529::0::1::::<><><>0<>0<><>::
-::res://assets/::1763817396
-background1.png::CompressedTexture2D::6481419785538051771::1762809812::1762809813::1::::<><><>0<>0<>c144e966884c71bcb2d0469937db3f5c<>res://.godot/imported/background1.png-a44d78bededebe7a201c901af9d9ce13.ctex::
+::res://assets/::1763825917
 background_0.png::CompressedTexture2D::8614909648961479464::1763591150::1763806800::1::::<><><>0<>0<>d47fd3b7a847b71ee369dae5af079453<>res://.godot/imported/background_0.png-3860dfef0a834ce37bc7056f62664e0f.ctex::
 background_1-export.png::CompressedTexture2D::5178400893735881809::1763591771::1763806783::1::::<><><>0<>0<>56ff9238fbf11e612ff662a5792c0c61<>res://.godot/imported/background_1-export.png-30a66d22801d9b6a61451c612ba2fe87.ctex::
 background_2-export.png::CompressedTexture2D::2682727431949904025::1763591771::1763806804::1::::<><><>0<>0<>8bcfb6897651d467d29856154fadf2c4<>res://.godot/imported/background_2-export.png-f6823729eb8663984636af42725c8f32.ctex::
 bee_asset.png::CompressedTexture2D::6128545426938864698::1763759446::1763759446::1::::<><><>0<>0<>508e0c78dc864fed4c756fb73b1cc6cc<>res://.godot/imported/bee_asset.png-fce31b2d1ceebd07bfd212a186df56f2.ctex::
-bola.png::CompressedTexture2D::7378128307704562736::1763817396::1763817396::1::::<><><>0<>0<>18f433fd520b8ea83b49cac3d05de0e2<>res://.godot/imported/bola.png-68fecd34ae8fa046d1c66a1d0fca067d.ctex::
+bola2.png::CompressedTexture2D::8090387272433706990::1763825917::1763825917::1::::<><><>0<>0<>76bba5de321616b55ff72159f9be3c94<>res://.godot/imported/bola2.png-e0a7ceffcc4144e067c840fbff2195a9.ctex::
+bola.png::CompressedTexture2D::7378128307704562736::1763825905::1763825905::1::::<><><>0<>0<>18f433fd520b8ea83b49cac3d05de0e2<>res://.godot/imported/bola.png-68fecd34ae8fa046d1c66a1d0fca067d.ctex::
 box.png::CompressedTexture2D::2811983565520878422::1763405572::1763405572::1::::<><><>0<>0<>27242e2611d210d64a336981251b8f26<>res://.godot/imported/box.png-52cc4e41fddadef836f9ad4dbe7936fa.ctex::
 colmena.png::CompressedTexture2D::3587693449677983561::1763806746::1763806747::1::::<><><>0<>0<>114c938085ba43e060af87edbd5af108<>res://.godot/imported/colmena.png-5be53a40530332e462fba67e80863fe6.ctex::
 hamstersheet.png::CompressedTexture2D::6523985415272282354::1762550692::1763506460::1::::<><><>0<>0<>ff195bdb7f414e254b8ff781f8121505<>res://.godot/imported/hamstersheet.png-fee795a1bb17306b9dc20afbef8acc9b.ctex::
 HEART2.png::CompressedTexture2D::9065780785202755324::1763225851::1763225893::1::::<><><>0<>0<>6a15a3b83f0034bdb9da4b6220753471<>res://.godot/imported/HEART2.png-093a4d4094c11e5b47a5af3f4e4a0c2e.ctex::
 HEART.png::CompressedTexture2D::2069102805540842515::1763225851::1763225898::1::::<><><>0<>0<>131e4d5b26046ecde81579cce4fcdff4<>res://.godot/imported/HEART.png-f1683afb44d098f11a585d19b91ccb28.ctex::
-Hedgehog Sprite Sheet.png::CompressedTexture2D::7776809213074443122::1763139304::1763139305::1::::<><><>0<>0<>2a2fa038e9ead9e63f8b4de3fa9ebab6<>res://.godot/imported/Hedgehog Sprite Sheet.png-737d21c392d0c5c90283713c93933d2c.ctex::
 HusterRollAnimationpng.png::CompressedTexture2D::6272499940118407198::1763138911::1763138911::1::::<><><>0<>0<>c5d506f8125aa472cf9afae5b5222438<>res://.godot/imported/HusterRollAnimationpng.png-09e3100c58c1a134fb83d840dc63f0b2.ctex::
 pinchos.png::CompressedTexture2D::448090891571403185::1763206550::1763207303::1::::<><><>0<>0<>437b49846af29922a77b22eecd9b011c<>res://.godot/imported/pinchos.png-a98a3f5f02f7cfee822b0b467efb89c3.ctex::
 pipa_sprite_sheet.png::CompressedTexture2D::9138600673591127517::1762726161::1762726161::1::::<><><>0<>0<>c1a9279f0140ed32c0a6d84573d04837<>res://.godot/imported/pipa_sprite_sheet.png-24e390a01b363f11d33947377e242880.ctex::
@@ -35,8 +34,7 @@ enemy_2.gd::GDScript::5906390304173910011::1763760469::0::1::::<>CharacterBody2D
 enemy_2.tscn::PackedScene::7300906046582640351::1763760474::0::1::::<><><>0<>0<><>::uid://cqfdndq16eb2r::::res://characters/enemy_2.gd<>uid://ctkyiopexjnxa::::res://assets/bee_asset.png
 player.gd::GDScript::8373282521086597355::1763809853::0::1::::<>CharacterBody2D<><>0<>0<><>::
 player.tscn::PackedScene::592351765333164253::1763771788::0::1::::<><><>0<>0<><>::uid://cy7jc7ev5awp3::::res://assets/hamstersheet.png<>uid://drkc0ff63hxo2::::res://characters/player.gd<>uid://cvmpfmf6ijrhe::::res://assets/HusterRollAnimationpng.png<>uid://c8esjudu0gy03::::res://music/AudioDamage.ogg<>uid://doh2o5yuw8fge::::res://music/open_door.wav
-::res://elements/::1763825259
-bola.png::CompressedTexture2D::6145710232858594716::1763825259::1763825259::1::::<><><>0<>0<>ac39e4401e082e7edb8918e74d697837<>res://.godot/imported/bola.png-22702a13a611ee728b2585f7223ce6ff.ctex::
+::res://elements/::1763825776
 box.tscn::PackedScene::7209590888226056374::1763408504::0::1::::<><><>0<>0<><>::uid://bgce7uaojiau5::::res://assets/box.png
 heart.gd::GDScript::220526230938000947::1763227545::0::1::::<>Area2D<><>0<>0<><>::
 heart.tscn::PackedScene::4214101731074508650::1763405798::0::1::::<><><>0<>0<><>::uid://de3bgh7gpwnj::::res://elements/heart.gd<>uid://d2fsc5jbot7xw::::res://assets/HEART2.png
