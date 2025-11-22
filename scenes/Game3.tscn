@@ -371,6 +371,7 @@ tile_set = SubResource("TileSet_mcjy6")
 [node name="DoorArea" type="Area2D" parent="." node_paths=PackedStringArray("tilemap") groups=["door"]]
 script = ExtResource("3_i8wqy")
 tilemap = NodePath("../TileMapLayer")
+puerta_pos = Vector2i(201, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorArea"]
 position = Vector2(3649.5, 41.75)

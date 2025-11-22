@@ -6,7 +6,9 @@ extends Area2D
 var player_en_rango = false
 
 # Posición EXACTA del tile de la puerta (coordenada de tile, no píxeles)
-var puerta_pos: Vector2i = Vector2i(94, 4)
+@export var puerta_pos: Vector2i 
+
+# Game 2: 94/4
 
 # Coordenadas dentro del atlas
 var puerta_cerrada: Vector2i = Vector2i(5, 6)
