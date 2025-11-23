@@ -50,7 +50,7 @@ animations = [{
 radius = 4.465116
 height = 13.658536
 
-[node name="pipe" type="Area2D" groups=["colletible"]]
+[node name="pipe" type="Area2D" groups=["collectible"]]
 texture_filter = 1
 script = ExtResource("1_hd0yu")
 

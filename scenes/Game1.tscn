@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://05asbg8cii5s"]
+[gd_scene load_steps=22 format=4 uid="uid://05asbg8cii5s"]
 
 [ext_resource type="Texture2D" uid="uid://du0ekktrcbrgq" path="res://assets/background_0.png" id="1_uva1g"]
 [ext_resource type="Script" uid="uid://dwmepp6ov171y" path="res://scripts/clouds.gd" id="2_81ei4"]
@@ -15,6 +15,8 @@
 [ext_resource type="AudioStream" uid="uid://d18wp7lvnib7e" path="res://music/2-cherry-cute-bgm-271158.mp3" id="13_uva1g"]
 [ext_resource type="PackedScene" uid="uid://cbuqayiwrwc6m" path="res://menu/pause_menu.tscn" id="14_81ei4"]
 [ext_resource type="PackedScene" uid="uid://dcixxnjwcnkp6" path="res://menu/ui_state.tscn" id="15_noa2v"]
+[ext_resource type="Script" uid="uid://b2wywi1nkqmob" path="res://menu/LevelController.gd" id="16_heyx7"]
+[ext_resource type="FontFile" uid="uid://dvkg6fga4w38" path="res://menu/FreePixel.ttf" id="17_1earx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mua0o"]
 texture = ExtResource("5_1earx")
@@ -254,6 +256,9 @@ sources/0 = SubResource("TileSetAtlasSource_mua0o")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4bav"]
 size = Vector2(68, 53)
 
+[sub_resource type="LabelSettings" id="LabelSettings_hxw3l"]
+font = ExtResource("17_1earx")
+
 [node name="Game2" type="Node2D"]
 
 [node name="Background0" type="Sprite2D" parent="."]
@@ -299,8 +304,9 @@ puerta_pos = Vector2i(100, 0)
 position = Vector2(1831, 6)
 shape = SubResource("RectangleShape2D_t4bav")
 
-[node name="player" parent="." instance=ExtResource("7_6rmwx")]
-position = Vector2(-394, -77)
+[node name="player" parent="." node_paths=PackedStringArray("levelController") instance=ExtResource("7_6rmwx")]
+position = Vector2(1705, -31)
+levelController = NodePath("../GameController")
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("objeto_a_seguir")]
 position = Vector2(-341, -34)
@@ -347,7 +353,18 @@ parameters/looping = true
 
 [node name="UIState" parent="." instance=ExtResource("15_noa2v")]
 
-[node name="Node" type="Node" parent="."]
+[node name="GameController" type="Node2D" parent="." node_paths=PackedStringArray("ui", "pause_manager")]
+position = Vector2(1791, -74)
+script = ExtResource("16_heyx7")
+ui = NodePath("../UIState")
+pause_manager = NodePath("../PauseMenu")
+
+[node name="Timer" type="Timer" parent="GameController"]
+
+[node name="CountdownLabel" type="Label" parent="GameController"]
+offset_right = 40.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_hxw3l")
 
 [connection signal="body_entered" from="DoorArea" to="player" method="_on_door_area_body_entered"]
 [connection signal="body_exited" from="DoorArea" to="player" method="_on_door_area_body_exited"]

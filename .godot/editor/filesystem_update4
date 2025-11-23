@@ -8,3 +8,5 @@ res://menu/PauseManager.gd
 res://menu/ui_state.tscn
 res://menu/LevelController.gd
 res://elements/pipe.tscn
+res://elements/pipe.gd
+res://characters/player.gd

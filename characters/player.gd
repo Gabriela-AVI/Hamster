@@ -18,6 +18,8 @@ var tiempo_quieto = 0
 var monedas = 0
 var vida = 1
 
+@export var levelController: Node
+
 # Detectar interacción con la puerta
 var puerta_area: Node = null
 
@@ -149,7 +151,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		morir()
 
 
-# --- DAÑO por enemy
+# --- DAÑO por enemy ---
 func recibir_daño(cantidad):
 	if vida <= 0:
 		return
@@ -172,9 +174,8 @@ func _on_door_area_body_exited(body):
 		puerta_area = null
 
 
-# --- TERMINAR ---
+# --- TERMINAR NIVEL ---
 func finalizar_nivel():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	$AudioDoor.play()
-	await get_tree().create_timer(4.0).timeout
-	get_tree().quit()
+	levelController._start_countdown()

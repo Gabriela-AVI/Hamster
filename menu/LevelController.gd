@@ -1,7 +1,7 @@
 extends Node
 
 @export var level_id: int = 1
-@export var countdown_duration: float = 5.0
+@export var countdown_duration: float = 3.0
 
 @onready var timer: Timer = $Timer
 @onready var countdown_label: Label = $CountdownLabel
@@ -21,8 +21,6 @@ var counting := false
 var elapsed_time: float = 0.0
 
 func _ready():
-	connect("body_entered", _on_body_enter)
-	connect("body_exited", _on_body_exit)
 	timer.connect("timeout", _on_timer_timeout)
 
 	countdown_label.visible = false
@@ -74,30 +72,6 @@ func _on_collectible_collected(body):
 	
 	ui.set_coins_text(total_collected) 
 
-func _on_body_enter(body):
-	if body.is_in_group("player"):
-		players_inside[body.get_instance_id()] = true
-		_check_players()
-
-
-func _on_body_exit(body):
-	if body.is_in_group("player"):
-		players_inside.erase(body.get_instance_id())
-		_check_players()
-
-
-func _check_players():
-	var count = players_inside.size()
-
-	if count == 1:
-		_show_static_5_seconds()
-
-	elif count >= 2:
-		if not counting:
-			_start_countdown()
-
-	else:
-		_reset_countdown()
 
 func _start_countdown():
 	countdown_time = countdown_duration
@@ -105,22 +79,6 @@ func _start_countdown():
 	countdown_label.visible = true
 	timer.start(countdown_duration)
 	print("Countdown started")
-
-
-func _show_static_5_seconds():
-	countdown_label.visible = true
-	countdown_time = countdown_duration
-	counting = false
-	timer.stop()
-	_update_label()
-
-
-func _reset_countdown():
-	counting = false
-	countdown_label.visible = false
-	countdown_label.text = ""
-	timer.stop()
-	print("Countdown reset")
 
 
 func _update_label():

@@ -30,7 +30,7 @@ window/stretch/mode="canvas_items"
 
 player=""
 door=""
-colletible=""
+collectible=""
 
 [input]
 
