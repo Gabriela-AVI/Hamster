@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbuqayiwrwc6m"]
+
+[ext_resource type="Script" uid="uid://8nrh4vvr0plx" path="res://menu/PauseManager.gd" id="1_vy7sn"]
+[ext_resource type="FontFile" uid="uid://dvkg6fga4w38" path="res://menu/FreePixel.ttf" id="2_lgp46"]
+
+[node name="PauseMenu" type="CanvasLayer" node_paths=PackedStringArray("pause_menu", "resume_button", "retry_button", "mainmenu_button")]
+script = ExtResource("1_vy7sn")
+pause_menu = NodePath("PauseMenu")
+resume_button = NodePath("PauseMenu/VBoxContainer/HBoxContainer/ResumeButton")
+retry_button = NodePath("PauseMenu/VBoxContainer/HBoxContainer/RestartButton")
+mainmenu_button = NodePath("PauseMenu/VBoxContainer/MainMenuButton")
+
+[node name="PauseMenu" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchor_left = 0.2
+anchor_top = 0.2
+anchor_right = 0.8
+anchor_bottom = 0.8
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -176.0
+offset_right = 176.0
+offset_bottom = 137.0
+grow_horizontal = 2
+theme_override_constants/separation = 25
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 50
+
+[node name="ResumeButton" type="Button" parent="PauseMenu/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_lgp46")
+theme_override_font_sizes/font_size = 48
+text = "Resume"
+
+[node name="RestartButton" type="Button" parent="PauseMenu/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_lgp46")
+theme_override_font_sizes/font_size = 48
+text = "Retry"
+
+[node name="MainMenuButton" type="Button" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_lgp46")
+theme_override_font_sizes/font_size = 48
+text = "Main menu"

@@ -1,2 +1,10 @@
 res://scenes/Game1.tscn
 res://menu/MenuControl.gd
+res://menu/GameState.gd
+res://scenes/Game2.tscn
+res://scenes/Game3.tscn
+res://menu/pause_menu.tscn
+res://menu/PauseManager.gd
+res://menu/ui_state.tscn
+res://menu/LevelController.gd
+res://elements/pipe.tscn

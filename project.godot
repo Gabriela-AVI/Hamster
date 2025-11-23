@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 PlayerData="*res://menu/player_data.gd"
 PlayersLoader="*res://menu/PlayersLoader.gd"
 ServerSync="*res://menu/ServerSync.gd"
+GameState="*res://menu/GameState.gd"
 
 [display]
 
@@ -29,6 +30,7 @@ window/stretch/mode="canvas_items"
 
 player=""
 door=""
+colletible=""
 
 [input]
 

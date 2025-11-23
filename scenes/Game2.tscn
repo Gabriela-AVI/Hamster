@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://dte0a5aprinvv"]
+[gd_scene load_steps=18 format=4 uid="uid://dte0a5aprinvv"]
 
 [ext_resource type="Texture2D" uid="uid://du0ekktrcbrgq" path="res://assets/background_0.png" id="1_6slyv"]
 [ext_resource type="PackedScene" uid="uid://io67g1edo47j" path="res://characters/player.tscn" id="1_fdxsg"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://daym55ln1fq3w" path="res://elements/box.tscn" id="5_t4bav"]
 [ext_resource type="PackedScene" uid="uid://w443o58jw87e" path="res://characters/enemy.tscn" id="8_y3wct"]
 [ext_resource type="AudioStream" uid="uid://ca4f16fd62d55" path="res://music/5-strawberry-mousse-cute-bgm-274668.mp3" id="13_cr3rr"]
+[ext_resource type="PackedScene" uid="uid://cbuqayiwrwc6m" path="res://menu/pause_menu.tscn" id="14_a1tbd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mua0o"]
 texture = ExtResource("1_mua0o")
@@ -366,6 +367,8 @@ position = Vector2(1785, -32)
 stream = ExtResource("13_cr3rr")
 autoplay = true
 parameters/looping = true
+
+[node name="PauseMenu" parent="." instance=ExtResource("14_a1tbd")]
 
 [connection signal="body_entered" from="DoorArea" to="player" method="_on_door_area_body_entered"]
 [connection signal="body_exited" from="DoorArea" to="player" method="_on_door_area_body_exited"]

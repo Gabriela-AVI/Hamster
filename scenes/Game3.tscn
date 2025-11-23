@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://b7re7mifmj0hn"]
+[gd_scene load_steps=25 format=4 uid="uid://b7re7mifmj0hn"]
 
 [ext_resource type="Texture2D" uid="uid://du0ekktrcbrgq" path="res://assets/background_0.png" id="1_2imc6"]
 [ext_resource type="Texture2D" uid="uid://dncdud5veafu7" path="res://assets/señal.png" id="1_53d70"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bw7xuxnek0mnb" path="res://elements/bola.tscn" id="14_mrent"]
 [ext_resource type="PackedScene" uid="uid://x60mtaa2s88b" path="res://scripts/area_2d_safe.tscn" id="15_efwou"]
 [ext_resource type="Texture2D" uid="uid://cljkfs7iv1clu" path="res://assets/TREE.png" id="17_av3nd"]
+[ext_resource type="PackedScene" uid="uid://cbuqayiwrwc6m" path="res://menu/pause_menu.tscn" id="18_npmqg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mua0o"]
 texture = ExtResource("2_d2rpr")
@@ -474,6 +475,8 @@ scale = Vector2(3.2630177, 3.3671873)
 texture = ExtResource("17_av3nd")
 region_enabled = true
 region_rect = Rect2(48, 0, 48, 48)
+
+[node name="PauseMenu" parent="." instance=ExtResource("18_npmqg")]
 
 [connection signal="body_entered" from="DoorArea" to="player" method="_on_door_area_body_entered"]
 [connection signal="body_exited" from="DoorArea" to="player" method="_on_door_area_body_exited"]

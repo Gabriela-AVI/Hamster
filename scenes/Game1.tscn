@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://05asbg8cii5s"]
+[gd_scene load_steps=19 format=4 uid="uid://05asbg8cii5s"]
 
 [ext_resource type="Texture2D" uid="uid://du0ekktrcbrgq" path="res://assets/background_0.png" id="1_uva1g"]
 [ext_resource type="Script" uid="uid://dwmepp6ov171y" path="res://scripts/clouds.gd" id="2_81ei4"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://b1blv0vujrs7k" path="res://elements/heart.tscn" id="11_0on78"]
 [ext_resource type="PackedScene" uid="uid://c5b47xg0npppn" path="res://elements/pipe.tscn" id="12_18xrn"]
 [ext_resource type="AudioStream" uid="uid://d18wp7lvnib7e" path="res://music/2-cherry-cute-bgm-271158.mp3" id="13_uva1g"]
+[ext_resource type="PackedScene" uid="uid://cbuqayiwrwc6m" path="res://menu/pause_menu.tscn" id="14_81ei4"]
+[ext_resource type="PackedScene" uid="uid://dcixxnjwcnkp6" path="res://menu/ui_state.tscn" id="15_noa2v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mua0o"]
 texture = ExtResource("5_1earx")
@@ -340,6 +342,12 @@ position = Vector2(1526, 23)
 stream = ExtResource("13_uva1g")
 autoplay = true
 parameters/looping = true
+
+[node name="PauseMenu" parent="." instance=ExtResource("14_81ei4")]
+
+[node name="UIState" parent="." instance=ExtResource("15_noa2v")]
+
+[node name="Node" type="Node" parent="."]
 
 [connection signal="body_entered" from="DoorArea" to="player" method="_on_door_area_body_entered"]
 [connection signal="body_exited" from="DoorArea" to="player" method="_on_door_area_body_exited"]
