@@ -11,3 +11,5 @@ res://elements/pipe.tscn
 res://elements/pipe.gd
 res://characters/player.gd
 res://menu/UIState.gd
+res://menu/MainMenu.tscn
+res://characters/player.tscn

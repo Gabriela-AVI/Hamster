@@ -1,8 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://b7jvrngmru8nd"]
+[gd_scene load_steps=16 format=3 uid="uid://b7jvrngmru8nd"]
 
 [ext_resource type="Script" uid="uid://dthrtmx4435q6" path="res://menu/MenuControl.gd" id="1_rbtx8"]
+[ext_resource type="Texture2D" uid="uid://du0ekktrcbrgq" path="res://assets/background_0.png" id="1_usddi"]
+[ext_resource type="Script" uid="uid://dwmepp6ov171y" path="res://scripts/clouds.gd" id="2_66hc1"]
 [ext_resource type="LabelSettings" uid="uid://clglqaok7gfnk" path="res://menu/menuText.tres" id="2_kh61s"]
 [ext_resource type="Script" uid="uid://d3daclqgnygjb" path="res://menu/LevelStatsCreator.gd" id="2_wn5o1"]
+[ext_resource type="Texture2D" uid="uid://cf1prhdtdx3vp" path="res://assets/background_1-export.png" id="3_jwicl"]
 [ext_resource type="PackedScene" uid="uid://bha0xpls50hyc" path="res://menu/LevelStatEntry.tscn" id="3_kh61s"]
 [ext_resource type="FontFile" uid="uid://dvkg6fga4w38" path="res://menu/FreePixel.ttf" id="5_kh61s"]
 
@@ -29,6 +32,28 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Background0" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 3
+position = Vector2(190.52785, -160)
+scale = Vector2(1.0486112, 1.05)
+texture = ExtResource("1_usddi")
+region_enabled = true
+region_rect = Rect2(0, 0, 5000, 5000)
+script = ExtResource("2_66hc1")
+speed = 5.0
+
+[node name="Background1" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 3
+position = Vector2(191.52783, -174)
+scale = Vector2(1.0486112, 1.05)
+texture = ExtResource("3_jwicl")
+region_enabled = true
+region_rect = Rect2(0, 0, 5000, 5000)
+script = ExtResource("2_66hc1")
+speed = 10.0
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1
