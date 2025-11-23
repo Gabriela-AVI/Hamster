@@ -1,17 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://dcixxnjwcnkp6"]
+[gd_scene load_steps=6 format=3 uid="uid://dcixxnjwcnkp6"]
 
 [ext_resource type="Script" uid="uid://dbvrfecnd867p" path="res://menu/UIState.gd" id="1_3elhh"]
 [ext_resource type="FontFile" uid="uid://dvkg6fga4w38" path="res://menu/FreePixel.ttf" id="2_ifqff"]
 [ext_resource type="Texture2D" uid="uid://d3g2oheh6110d" path="res://assets/pipa_sprite_sheet.png" id="3_gqtkg"]
+[ext_resource type="Texture2D" uid="uid://d2fsc5jbot7xw" path="res://assets/HEART2.png" id="4_gqtkg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_aiv1b"]
 font = ExtResource("2_ifqff")
 font_size = 54
 
-[node name="UIState" type="CanvasLayer" node_paths=PackedStringArray("level_timer_label", "coins_label")]
+[node name="UIState" type="CanvasLayer" node_paths=PackedStringArray("level_timer_label", "coins_label", "heart_image")]
 script = ExtResource("1_3elhh")
 level_timer_label = NodePath("Control/HBoxContainer/LevelTimerLabel")
 coins_label = NodePath("Control/HBoxContainer/CoinsLabel")
+heart_image = NodePath("Control/HBoxContainer/Sprite2D_2")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -39,7 +41,7 @@ label_settings = SubResource("LabelSettings_aiv1b")
 
 [node name="Sprite2D" type="Sprite2D" parent="Control/HBoxContainer"]
 texture_filter = 1
-position = Vector2(300, 20)
+position = Vector2(372, 19.04)
 scale = Vector2(4, 4)
 texture = ExtResource("3_gqtkg")
 hframes = 5
@@ -48,3 +50,12 @@ hframes = 5
 layout_mode = 2
 text = "0"
 label_settings = SubResource("LabelSettings_aiv1b")
+
+[node name="Sprite2D_2" type="Sprite2D" parent="Control/HBoxContainer"]
+visible = false
+texture_filter = 1
+position = Vector2(-100, 26.04)
+scale = Vector2(2, 2)
+texture = ExtResource("4_gqtkg")
+region_enabled = true
+region_rect = Rect2(0, 8, 32, 24)

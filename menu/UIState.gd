@@ -3,6 +3,7 @@ class_name UIState
 
 @export var level_timer_label: Label
 @export var coins_label: Label
+@export var heart_image: Sprite2D
 
 
 func set_time_text(text: String) -> void:

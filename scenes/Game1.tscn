@@ -305,7 +305,7 @@ position = Vector2(1831, 6)
 shape = SubResource("RectangleShape2D_t4bav")
 
 [node name="player" parent="." node_paths=PackedStringArray("levelController") instance=ExtResource("7_6rmwx")]
-position = Vector2(1705, -31)
+position = Vector2(-351, -83)
 levelController = NodePath("../GameController")
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("objeto_a_seguir")]
@@ -365,6 +365,7 @@ pause_manager = NodePath("../PauseMenu")
 offset_right = 40.0
 offset_bottom = 23.0
 label_settings = SubResource("LabelSettings_hxw3l")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="DoorArea" to="player" method="_on_door_area_body_entered"]
 [connection signal="body_exited" from="DoorArea" to="player" method="_on_door_area_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://b7re7mifmj0hn"]
+[gd_scene load_steps=29 format=4 uid="uid://b7re7mifmj0hn"]
 
 [ext_resource type="Texture2D" uid="uid://du0ekktrcbrgq" path="res://assets/background_0.png" id="1_2imc6"]
 [ext_resource type="Texture2D" uid="uid://dncdud5veafu7" path="res://assets/señal.png" id="1_53d70"]
@@ -18,6 +18,9 @@
 [ext_resource type="PackedScene" uid="uid://x60mtaa2s88b" path="res://scripts/area_2d_safe.tscn" id="15_efwou"]
 [ext_resource type="Texture2D" uid="uid://cljkfs7iv1clu" path="res://assets/TREE.png" id="17_av3nd"]
 [ext_resource type="PackedScene" uid="uid://cbuqayiwrwc6m" path="res://menu/pause_menu.tscn" id="18_npmqg"]
+[ext_resource type="PackedScene" uid="uid://dcixxnjwcnkp6" path="res://menu/ui_state.tscn" id="19_0ohf6"]
+[ext_resource type="Script" uid="uid://b2wywi1nkqmob" path="res://menu/LevelController.gd" id="19_xby7w"]
+[ext_resource type="FontFile" uid="uid://dvkg6fga4w38" path="res://menu/FreePixel.ttf" id="20_0ohf6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mua0o"]
 texture = ExtResource("2_d2rpr")
@@ -319,6 +322,9 @@ _data = {
 &"move": SubResource("Animation_mrent")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_cceww"]
+font = ExtResource("20_0ohf6")
+
 [node name="Game3" type="Node2D"]
 
 [node name="Background0" type="Sprite2D" parent="."]
@@ -388,8 +394,9 @@ libraries = {
 }
 autoplay = "move"
 
-[node name="player" parent="." instance=ExtResource("4_2imc6")]
+[node name="player" parent="." node_paths=PackedStringArray("levelController") instance=ExtResource("4_2imc6")]
 position = Vector2(-474, -262)
+levelController = NodePath("../GameController")
 
 [node name="Colmena" type="Sprite2D" parent="."]
 position = Vector2(1339, 392)
@@ -477,6 +484,22 @@ region_enabled = true
 region_rect = Rect2(48, 0, 48, 48)
 
 [node name="PauseMenu" parent="." instance=ExtResource("18_npmqg")]
+
+[node name="UIState" parent="." instance=ExtResource("19_0ohf6")]
+
+[node name="GameController" type="Node2D" parent="." node_paths=PackedStringArray("ui", "pause_manager")]
+position = Vector2(3601, 0)
+script = ExtResource("19_xby7w")
+ui = NodePath("../UIState")
+pause_manager = NodePath("../PauseMenu")
+
+[node name="Timer" type="Timer" parent="GameController"]
+
+[node name="CountdownLabel" type="Label" parent="GameController"]
+offset_right = 40.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_cceww")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="DoorArea" to="player" method="_on_door_area_body_entered"]
 [connection signal="body_exited" from="DoorArea" to="player" method="_on_door_area_body_exited"]

@@ -132,21 +132,20 @@ func morir():
 # --- GANAR VIDA ---
 func ganar_vida(cantidad):
 	vida += cantidad
-	print("DEBUG → Vida actual: ", vida)
+	levelController.ui.heart_image.visible = true
 
 
 # --- RECOGER MONEDAS ---
 func recoger_moneda():
 	monedas += 1
-	print("DEBUG → Monedas recogidas: ", monedas)
 
 
 #--- DAÑO por pinchos---
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	vida -= 1
+	levelController.ui.heart_image.visible = false
 	$AnimatedSprite2D.play("die")
 	$AudioDamage.play()
-	print("DEBUG → Vida actual: ", vida)
 	if vida <= 0:
 		morir()
 
@@ -156,7 +155,8 @@ func recibir_daño(cantidad):
 	if vida <= 0:
 		return
 	vida -= cantidad
-	print("DEBUG → Vida actual: ", vida)
+	levelController.ui.heart_image.visible = false
+
 	$AnimatedSprite2D.play("die")
 	$AudioDamage.play()
 	if vida <= 0:
