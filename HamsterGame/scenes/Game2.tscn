@@ -318,14 +318,13 @@ label_settings = SubResource("LabelSettings_pica0")
 
 [node name="Label_4" type="Label" parent="."]
 texture_filter = 1
-offset_left = -554.0
-offset_top = -149.0
-offset_right = -130.0
-offset_bottom = -80.0
-text = "Usa el click derecho de tu ratón 
-para mirar un poco más lejos."
+offset_left = -505.0
+offset_top = 10.0
+offset_right = -81.0
+offset_bottom = 79.0
+text = "Usa el click derecho de tu 
+  ratón para mirar un poco más lejos."
 label_settings = SubResource("LabelSettings_pica0")
-horizontal_alignment = 1
 
 [node name="DoorArea" type="Area2D" parent="." node_paths=PackedStringArray("tilemap") groups=["door"]]
 script = ExtResource("3_16hu5")
