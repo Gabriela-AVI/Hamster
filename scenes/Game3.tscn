@@ -388,7 +388,7 @@ libraries = {
 autoplay = "move"
 
 [node name="player" parent="." instance=ExtResource("4_2imc6")]
-position = Vector2(-488, -240)
+position = Vector2(-474, -262)
 
 [node name="Colmena" type="Sprite2D" parent="."]
 position = Vector2(1339, 392)
@@ -452,7 +452,7 @@ position = Vector2(2878, -10)
 position = Vector2(411, 248)
 
 [node name="Area2D_SAFE" parent="." instance=ExtResource("15_efwou")]
-position = Vector2(3350, -14)
+position = Vector2(3345, -5)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_qyugy")
