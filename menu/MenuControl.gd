@@ -31,7 +31,8 @@ func _ready():
 	$SettingsPanel/VBoxContainer/HBoxContainer/Apply.pressed.connect(_on_apply_name_pressed)
 	
 	$LevelsPanel/VBoxContainer/ButtonLvl1.pressed.connect(_on_lvl1_pressed)
-	$LevelsPanel/VBoxContainer/ButtonLvl2.pressed.connect(_on_lvl1_pressed)
+	$LevelsPanel/VBoxContainer/ButtonLvl2.pressed.connect(_on_lvl2_pressed)
+	$LevelsPanel/VBoxContainer/ButtonLvl3.pressed.connect(_on_lvl3_pressed)
 	
 	fullscreen_button.pressed.connect(_on_fullscreen_toggled)
 	_update_fullscreen_text()
@@ -76,11 +77,15 @@ func _on_apply_name_pressed():
 
 
 func _on_lvl1_pressed():
-	get_tree().change_scene_to_file("res://Level1.tscn")
+	get_tree().change_scene_to_file("res://scenes/Game1.tscn")
 
 func _on_lvl2_pressed():
-	get_tree().change_scene_to_file("res://Level2.tscn")
-	
+	get_tree().change_scene_to_file("res://scenes/Game2.tscn")
+
+func _on_lvl3_pressed():
+	get_tree().change_scene_to_file("res://scenes/Game3.tscn")
+
+
 func _on_fullscreen_toggled():
 
 	var is_fullscreen = DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN
