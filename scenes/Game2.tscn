@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://dte0a5aprinvv"]
+[gd_scene load_steps=23 format=4 uid="uid://dte0a5aprinvv"]
 
 [ext_resource type="Texture2D" uid="uid://du0ekktrcbrgq" path="res://assets/background_0.png" id="1_6slyv"]
 [ext_resource type="PackedScene" uid="uid://io67g1edo47j" path="res://characters/player.tscn" id="1_fdxsg"]
@@ -17,6 +17,12 @@
 [ext_resource type="Script" uid="uid://b2wywi1nkqmob" path="res://menu/LevelController.gd" id="15_katk2"]
 [ext_resource type="PackedScene" uid="uid://dcixxnjwcnkp6" path="res://menu/ui_state.tscn" id="15_pica0"]
 [ext_resource type="FontFile" uid="uid://dvkg6fga4w38" path="res://menu/FreePixel.ttf" id="16_pica0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pica0"]
+line_spacing = 1.0
+paragraph_spacing = 1.0
+font = ExtResource("16_pica0")
+outline_size = 1
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mua0o"]
 texture = ExtResource("1_mua0o")
@@ -295,6 +301,25 @@ position = Vector2(-195, 6)
 scale = Vector2(0.390625, 0.390625)
 texture = ExtResource("2_mcjy6")
 
+[node name="Label_1" type="Label" parent="."]
+texture_filter = 1
+offset_left = -391.0
+offset_top = -77.0
+offset_right = -199.0
+offset_bottom = -42.0
+text = "A veces..."
+label_settings = SubResource("LabelSettings_pica0")
+
+[node name="Label_2" type="Label" parent="."]
+texture_filter = 1
+offset_left = -181.0
+offset_top = -79.0
+offset_right = 11.0
+offset_bottom = -44.0
+text = "... no todo es 
+lo que parece..."
+label_settings = SubResource("LabelSettings_pica0")
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
 position = Vector2(14, 14)
@@ -388,8 +413,10 @@ pause_manager = NodePath("../PauseMenu")
 [node name="Timer" type="Timer" parent="GameController"]
 
 [node name="CountdownLabel" type="Label" parent="GameController"]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 72.0
+offset_top = 29.0
+offset_right = 112.0
+offset_bottom = 52.0
 label_settings = SubResource("LabelSettings_lnh4t")
 metadata/_edit_use_anchors_ = true
 
