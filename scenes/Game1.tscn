@@ -359,10 +359,10 @@ label_settings = SubResource("LabelSettings_1earx")
 
 [node name="Label_6" type="Label" parent="."]
 texture_filter = 1
-offset_left = 1388.0
-offset_top = -8.0
-offset_right = 1700.0
-offset_bottom = 62.0
+offset_left = 1387.0
+offset_top = -15.0
+offset_right = 1681.0
+offset_bottom = 51.0
 text = "¡¡CUIDADO!! Estás entrando en territorio
 de un ratón de campo. Trata de esquivarlo 
             para que no te vea."
@@ -379,13 +379,13 @@ label_settings = SubResource("LabelSettings_1earx")
 
 [node name="Label_8" type="Label" parent="."]
 texture_filter = 1
-offset_left = 2000.0
-offset_top = 49.0
-offset_right = 2312.0
-offset_bottom = 119.0
+offset_left = 1978.0
+offset_top = 35.0
+offset_right = 2290.0
+offset_bottom = 105.0
 text = "¡¡MUY BIEN HECHOO!!
 
-¿Est@s preparad@ para el 
+¿Estás preparad@ para el 
 siguiente nivel?"
 label_settings = SubResource("LabelSettings_1earx")
 
