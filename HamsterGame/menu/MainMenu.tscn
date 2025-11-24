@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b7jvrngmru8nd"]
+[gd_scene load_steps=33 format=3 uid="uid://b7jvrngmru8nd"]
 
 [ext_resource type="Script" uid="uid://dthrtmx4435q6" path="res://menu/MenuControl.gd" id="1_rbtx8"]
 [ext_resource type="Texture2D" uid="uid://du0ekktrcbrgq" path="res://assets/background_0.png" id="1_usddi"]
@@ -7,8 +7,103 @@
 [ext_resource type="Script" uid="uid://d3daclqgnygjb" path="res://menu/LevelStatsCreator.gd" id="2_wn5o1"]
 [ext_resource type="Texture2D" uid="uid://cf1prhdtdx3vp" path="res://assets/background_1-export.png" id="3_jwicl"]
 [ext_resource type="PackedScene" uid="uid://bha0xpls50hyc" path="res://menu/LevelStatEntry.tscn" id="3_kh61s"]
+[ext_resource type="Script" uid="uid://bvdp753jajmph" path="res://menu/character_menu.gd" id="4_nmbnl"]
+[ext_resource type="Texture2D" uid="uid://cy7jc7ev5awp3" path="res://assets/hamstersheet.png" id="4_v8csg"]
 [ext_resource type="FontFile" uid="uid://dvkg6fga4w38" path="res://menu/FreePixel.ttf" id="5_kh61s"]
 [ext_resource type="AudioStream" uid="uid://d18wp7lvnib7e" path="res://music/2-cherry-cute-bgm-271158.mp3" id="9_66hc1"]
+[ext_resource type="Script" uid="uid://dyk7in10kckh5" path="res://music/music.gd" id="10_jwicl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmbnl"]
+atlas = ExtResource("4_v8csg")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65erl"]
+atlas = ExtResource("4_v8csg")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5o4k"]
+atlas = ExtResource("4_v8csg")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o1gqi"]
+atlas = ExtResource("4_v8csg")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvgpd"]
+atlas = ExtResource("4_v8csg")
+region = Rect2(96, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4a6gq"]
+atlas = ExtResource("4_v8csg")
+region = Rect2(96, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ff4bp"]
+atlas = ExtResource("4_v8csg")
+region = Rect2(96, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m881j"]
+atlas = ExtResource("4_v8csg")
+region = Rect2(96, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hgiw"]
+atlas = ExtResource("4_v8csg")
+region = Rect2(96, 256, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hl2ae"]
+atlas = ExtResource("4_v8csg")
+region = Rect2(96, 288, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5e166"]
+atlas = ExtResource("4_v8csg")
+region = Rect2(96, 320, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0iba8"]
+atlas = ExtResource("4_v8csg")
+region = Rect2(96, 352, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f4mk7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmbnl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65erl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5o4k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o1gqi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvgpd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4a6gq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ff4bp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m881j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hgiw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hl2ae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5e166")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0iba8")
+}],
+"loop": true,
+"name": &"stop",
+"speed": 8.0
+}]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ytr4m"]
 
@@ -55,6 +150,14 @@ region_enabled = true
 region_rect = Rect2(0, 0, 5000, 5000)
 script = ExtResource("2_66hc1")
 speed = 10.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(966, 601.00006)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_f4mk7")
+animation = &"stop"
+script = ExtResource("4_nmbnl")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1
@@ -254,6 +357,7 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_iwfq2")
 text = "Enviar datos"
 
 [node name="SettingsPanel" type="PanelContainer" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -349,3 +453,4 @@ text = "Atrás"
 stream = ExtResource("9_66hc1")
 autoplay = true
 parameters/looping = true
+script = ExtResource("10_jwicl")

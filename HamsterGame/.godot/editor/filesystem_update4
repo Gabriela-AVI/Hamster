@@ -5,3 +5,5 @@ res://elements/pipe.tscn
 res://menu/MenuControl.gd
 res://menu/MainMenu.tscn
 res://music/music.gd
+res://menu/ServerSync.gd
+res://menu/character_menu.gd

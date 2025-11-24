@@ -34,7 +34,6 @@ func fetch_player_data(player_id: String, target: Object = null, method_name: St
 	var http := HTTPRequest.new()
 	add_child(http)
 
-	# Передаем callback
 	http.request_completed.connect(func(result, response_code, headers, body):
 		_on_request_get_completed(result, response_code, headers, body)
 		if target and method_name != "":

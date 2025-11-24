@@ -1,3 +1,6 @@
+CollisionShape2D
+AnimatedSprite2D
+CharacterBody2D
 HSlider
 AudioStreamPlayer2D
 Label
@@ -5,11 +8,7 @@ Sprite2D
 Node2D
 Timer
 Node
-CollisionShape2D
 Area2D
 AnimatableBody2D
 AnimationPlayer
-AnimatedSprite2D
-CharacterBody2D
 RayCast2D
-RigidBody2D
