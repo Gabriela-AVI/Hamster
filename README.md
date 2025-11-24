@@ -7,6 +7,15 @@ esquivar enemigos y alcanzar la puerta de su querido invernadero.
 ⭐ Se encuentra **activo y en continua mejora**.
 
 ---
+## 🎯 Instalación del juego
+### Librerías utilizadas:
+- pip install djangorestframework
+- pip install djangorestframework-simplejwt
+  
+### Servidor se encuentra en **MicaDjango/micaserver**:
+- python manage.py runserver
+
+---
 ## 📋 Requisitos
 1. [Jugador](#jugador)
 2. [Enemigos](#enemigos)
@@ -19,10 +28,10 @@ esquivar enemigos y alcanzar la puerta de su querido invernadero.
 9. [Estética y jugabilidad](#estética-y-jugabilidad)
    
 ---
-  ## Jugador🐹
+  ## Jugador🐹 
   * Movimiento multidireccional
   * Acciones especiales (saltar, rodar…)
-  * Uso del ratón con procesamiento de coordenadas
+  * Uso del ratón con procesamiento de coordenadas.
 
   ## Enemigos👾
   Dos tipos de enemigos que llevan a cabo acciones sencillas:
@@ -41,7 +50,8 @@ esquivar enemigos y alcanzar la puerta de su querido invernadero.
   - Vida extra
 
   ## Funciones de red🛜
-  
+  (POST) | Publicar nombre del jugador, tiempo y puntuaciones.
+  (GET)  | Obtener y mostrar las puntuaciones en un scoreboard.
 
   ## Sonido🔊
   Elaborado ya que existen:
@@ -49,13 +59,15 @@ esquivar enemigos y alcanzar la puerta de su querido invernadero.
   - 3 canciones de fondo (cada 1 en un nivel distinto)
 
   ## Opciones🎛️
-  Existe un menú de opciones que permite configurar:
-  
-
+  Existe un menú de opciones que permite configurar (todas ellas se almacenan en un fichero):
+  - Nombre de usuario
+  - Volumen
+  - Panatalla completa
+    
   ## Estética y jugabilidad🕹️
-  Buena calidad porque está hecha con amor (y con un poco de prisa).
-  
+  Buena calidad porque está hecha con amor (y con muchos lloros).
+
 ---
-🎯 Persona Desarrolladora del Proyecto:   **G.A.V.I.**  
+🌸Persona Desarrolladora del Proyecto:   **G.A.V.I.**  
 
 
