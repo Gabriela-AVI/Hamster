@@ -395,17 +395,17 @@ libraries = {
 autoplay = "move"
 
 [node name="player" parent="." node_paths=PackedStringArray("levelController") instance=ExtResource("4_2imc6")]
-position = Vector2(-474, -262)
+position = Vector2(-445, -295)
 levelController = NodePath("../GameController")
+
+[node name="enemy_2" parent="." instance=ExtResource("8_06pev")]
+position = Vector2(1340.9999, 385)
+scale = Vector2(0.28999996, 0.28999996)
 
 [node name="Colmena" type="Sprite2D" parent="."]
 position = Vector2(1339, 392)
 scale = Vector2(0.051300056, 0.04795331)
 texture = ExtResource("5_mrent")
-
-[node name="enemy_2" parent="." instance=ExtResource("8_06pev")]
-position = Vector2(1340.9999, 385)
-scale = Vector2(0.28999996, 0.28999996)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("objeto_a_seguir")]
 position = Vector2(-351, -29)
@@ -488,7 +488,7 @@ region_rect = Rect2(48, 0, 48, 48)
 [node name="UIState" parent="." instance=ExtResource("19_0ohf6")]
 
 [node name="GameController" type="Node2D" parent="." node_paths=PackedStringArray("ui", "pause_manager")]
-position = Vector2(3601, 0)
+position = Vector2(3630, 76)
 script = ExtResource("19_xby7w")
 level_id = 3
 ui = NodePath("../UIState")

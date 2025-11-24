@@ -257,8 +257,6 @@ sources/0 = SubResource("TileSetAtlasSource_mua0o")
 line_spacing = 1.0
 paragraph_spacing = 1.0
 font = ExtResource("17_1earx")
-font_size = 14
-outline_size = 1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4bav"]
 size = Vector2(68, 53)
@@ -305,9 +303,9 @@ tile_set = SubResource("TileSet_mcjy6")
 [node name="Label_1" type="Label" parent="."]
 texture_filter = 1
 offset_left = -614.0
-offset_top = -98.0
+offset_top = -99.0
 offset_right = -382.0
-offset_bottom = -47.0
+offset_bottom = -48.0
 text = "¡¡ BIENVENID@
 AL MUNDO DE MICA !!"
 label_settings = SubResource("LabelSettings_1earx")
@@ -315,21 +313,21 @@ label_settings = SubResource("LabelSettings_1earx")
 [node name="Label_2" type="Label" parent="."]
 texture_filter = 1
 offset_left = -197.0
-offset_top = -122.0
+offset_top = -123.0
 offset_right = 115.0
-offset_bottom = -52.0
+offset_bottom = -53.0
 text = "   ¡CUIDADOO! 
 Para saltar pulsa...
-   (W)  (Space)   	
+    (W) (Space)   	
  "
 label_settings = SubResource("LabelSettings_1earx")
 
 [node name="Label_3" type="Label" parent="."]
 texture_filter = 1
-offset_left = 71.0
-offset_top = -136.0
-offset_right = 383.0
-offset_bottom = -66.0
+offset_left = 66.0
+offset_top = -142.0
+offset_right = 378.0
+offset_bottom = -72.0
 text = "Puedes rodar pulsando
  (BloqMays)  (Shift)   	
  "
@@ -337,10 +335,10 @@ label_settings = SubResource("LabelSettings_1earx")
 
 [node name="Label_4" type="Label" parent="."]
 texture_filter = 1
-offset_left = 317.0
-offset_top = 73.0
-offset_right = 629.0
-offset_bottom = 143.0
+offset_left = 305.0
+offset_top = 68.0
+offset_right = 617.0
+offset_bottom = 138.0
 text = "Empuja la caja
  (D) + (Shift) 	
  "
@@ -348,10 +346,10 @@ label_settings = SubResource("LabelSettings_1earx")
 
 [node name="Label_5" type="Label" parent="."]
 texture_filter = 1
-offset_left = 881.0
-offset_top = -39.0
-offset_right = 1193.0
-offset_bottom = 31.0
+offset_left = 869.0
+offset_top = -48.0
+offset_right = 1181.0
+offset_bottom = 22.0
 text = "  ¡¡ Salta sin miedo !!
  (D) + (Space) + (Shift) 	
  "
@@ -359,10 +357,10 @@ label_settings = SubResource("LabelSettings_1earx")
 
 [node name="Label_6" type="Label" parent="."]
 texture_filter = 1
-offset_left = 1387.0
-offset_top = -15.0
-offset_right = 1681.0
-offset_bottom = 51.0
+offset_left = 1362.0
+offset_top = -22.0
+offset_right = 1698.0
+offset_bottom = 44.0
 text = "¡¡CUIDADO!! Estás entrando en territorio
 de un ratón de campo. Trata de esquivarlo 
             para que no te vea."
@@ -371,18 +369,18 @@ label_settings = SubResource("LabelSettings_1earx")
 [node name="Label_7" type="Label" parent="."]
 texture_filter = 1
 offset_left = 561.0
-offset_top = -48.0
+offset_top = -49.0
 offset_right = 873.0
-offset_bottom = 22.0
+offset_bottom = 21.0
 text = "+1 vida <3"
 label_settings = SubResource("LabelSettings_1earx")
 
 [node name="Label_8" type="Label" parent="."]
 texture_filter = 1
-offset_left = 1978.0
-offset_top = 35.0
-offset_right = 2290.0
-offset_bottom = 105.0
+offset_left = 1961.0
+offset_top = 39.0
+offset_right = 2273.0
+offset_bottom = 109.0
 text = "¡¡MUY BIEN HECHOO!!
 
 ¿Estás preparad@ para el 
@@ -448,7 +446,7 @@ parameters/looping = true
 [node name="UIState" parent="." instance=ExtResource("15_noa2v")]
 
 [node name="GameController" type="Node2D" parent="." node_paths=PackedStringArray("ui", "pause_manager")]
-position = Vector2(1791, -74)
+position = Vector2(1799, 43)
 script = ExtResource("16_heyx7")
 ui = NodePath("../UIState")
 pause_manager = NodePath("../PauseMenu")
