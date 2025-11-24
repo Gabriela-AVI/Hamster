@@ -21,6 +21,7 @@ PlayerData="*res://menu/player_data.gd"
 PlayersLoader="*res://menu/PlayersLoader.gd"
 ServerSync="*res://menu/ServerSync.gd"
 GameState="*res://menu/GameState.gd"
+SettingsData="*res://menu/SettingsData.gd"
 
 [display]
 

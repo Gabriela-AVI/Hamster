@@ -1,3 +1,7 @@
 res://scenes/Game2.tscn
 res://scenes/Game3.tscn
 res://scenes/Game1.tscn
+res://elements/pipe.tscn
+res://menu/MenuControl.gd
+res://menu/MainMenu.tscn
+res://music/music.gd

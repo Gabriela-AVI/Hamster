@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://b7re7mifmj0hn"]
+[gd_scene load_steps=30 format=4 uid="uid://b7re7mifmj0hn"]
 
 [ext_resource type="Texture2D" uid="uid://du0ekktrcbrgq" path="res://assets/background_0.png" id="1_2imc6"]
 [ext_resource type="Texture2D" uid="uid://dncdud5veafu7" path="res://assets/señal.png" id="1_53d70"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bw7xuxnek0mnb" path="res://elements/bola.tscn" id="14_mrent"]
 [ext_resource type="PackedScene" uid="uid://x60mtaa2s88b" path="res://scripts/area_2d_safe.tscn" id="15_efwou"]
 [ext_resource type="Texture2D" uid="uid://cljkfs7iv1clu" path="res://assets/TREE.png" id="17_av3nd"]
+[ext_resource type="Script" uid="uid://dyk7in10kckh5" path="res://music/music.gd" id="18_cceww"]
 [ext_resource type="PackedScene" uid="uid://cbuqayiwrwc6m" path="res://menu/pause_menu.tscn" id="18_npmqg"]
 [ext_resource type="PackedScene" uid="uid://dcixxnjwcnkp6" path="res://menu/ui_state.tscn" id="19_0ohf6"]
 [ext_resource type="Script" uid="uid://b2wywi1nkqmob" path="res://menu/LevelController.gd" id="19_xby7w"]
@@ -466,6 +467,7 @@ position = Vector2(3345, -5)
 stream = ExtResource("13_qyugy")
 autoplay = true
 parameters/looping = true
+script = ExtResource("18_cceww")
 
 [node name="Tree2" type="Sprite2D" parent="."]
 texture_filter = 1

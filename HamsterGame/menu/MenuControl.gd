@@ -10,6 +10,9 @@ extends Control
 @onready var fullscreen_button = $SettingsPanel/VBoxContainer/HBoxContainer2/FullscreenButton
 var toggle_panels: Array[Control]
 
+@onready var volume_slider = $SettingsPanel/VBoxContainer/HBoxContainer3/VolumeSlider
+@onready var volume_value_label = $SettingsPanel/VBoxContainer/HBoxContainer3/VolumeValueLabel
+
 func _ready():
 	toggle_panels = [
 		main_panel,
@@ -35,7 +38,15 @@ func _ready():
 	$LevelsPanel/VBoxContainer/ButtonLvl3.pressed.connect(_on_lvl3_pressed)
 	
 	fullscreen_button.pressed.connect(_on_fullscreen_toggled)
+	SettingsData.load()
+	if SettingsData.fullscreen:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 	_update_fullscreen_text()
+	volume_slider.value = SettingsData.music_volume
+	volume_slider.value_changed.connect(_on_volume_changed)
+	_update_volume_label()
 
 	name_label.text = PlayerData.player_name
 
@@ -104,3 +115,11 @@ func _update_fullscreen_text():
 		fullscreen_button.text = "ON"
 	else:
 		fullscreen_button.text = "OFF"
+
+func _on_volume_changed(value):
+	SettingsData.music_volume = int(value)
+	SettingsData.save()
+	_update_volume_label()
+
+func _update_volume_label():
+	volume_value_label.text = str(SettingsData.music_volume) + "%"

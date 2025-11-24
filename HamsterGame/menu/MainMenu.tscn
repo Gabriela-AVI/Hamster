@@ -254,7 +254,6 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_iwfq2")
 text = "Enviar datos"
 
 [node name="SettingsPanel" type="PanelContainer" parent="Control"]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -299,7 +298,7 @@ theme_override_constants/separation = 50
 
 [node name="Label" type="Label" parent="Control/SettingsPanel/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-text = "Fullscreen mode: "
+text = "Pantalla completa: "
 label_settings = SubResource("LabelSettings_mae5d")
 
 [node name="FullscreenButton" type="Button" parent="Control/SettingsPanel/VBoxContainer/HBoxContainer2"]
@@ -310,6 +309,25 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxEmpty_l48gv")
 text = "OFF
 "
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control/SettingsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="Control/SettingsPanel/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Volumen:"
+label_settings = SubResource("LabelSettings_mae5d")
+
+[node name="VolumeSlider" type="HSlider" parent="Control/SettingsPanel/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+step = 10.0
+value = 50.0
+
+[node name="VolumeValueLabel" type="Label" parent="Control/SettingsPanel/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_mae5d")
 
 [node name="Panel" type="Panel" parent="Control/SettingsPanel"]
 layout_mode = 2

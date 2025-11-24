@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://dte0a5aprinvv"]
+[gd_scene load_steps=24 format=4 uid="uid://dte0a5aprinvv"]
 
 [ext_resource type="Texture2D" uid="uid://du0ekktrcbrgq" path="res://assets/background_0.png" id="1_6slyv"]
 [ext_resource type="PackedScene" uid="uid://io67g1edo47j" path="res://characters/player.tscn" id="1_fdxsg"]
@@ -15,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://ca4f16fd62d55" path="res://music/5-strawberry-mousse-cute-bgm-274668.mp3" id="13_cr3rr"]
 [ext_resource type="PackedScene" uid="uid://cbuqayiwrwc6m" path="res://menu/pause_menu.tscn" id="14_a1tbd"]
 [ext_resource type="Script" uid="uid://b2wywi1nkqmob" path="res://menu/LevelController.gd" id="15_katk2"]
+[ext_resource type="Script" uid="uid://dyk7in10kckh5" path="res://music/music.gd" id="15_lnh4t"]
 [ext_resource type="PackedScene" uid="uid://dcixxnjwcnkp6" path="res://menu/ui_state.tscn" id="15_pica0"]
 [ext_resource type="FontFile" uid="uid://dvkg6fga4w38" path="res://menu/FreePixel.ttf" id="16_pica0"]
 
@@ -398,6 +399,7 @@ position = Vector2(1785, -32)
 stream = ExtResource("13_cr3rr")
 autoplay = true
 parameters/looping = true
+script = ExtResource("15_lnh4t")
 
 [node name="PauseMenu" parent="." instance=ExtResource("14_a1tbd")]
 
