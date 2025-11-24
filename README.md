@@ -1,10 +1,10 @@
 # 🐹 MICA ✨
 
 ⭐ MICA es un juego 2D de tipo plataformas desarrollado en Godot 4, donde controlas a la propia hámster Mica. 
-Todo esto mediante saltos, dash y movimientos rápidos. Tu misión es recoger todas 
-las pipas posibles, evitar trampas, esquivar enemigos y alcanzar la puerta de su querido invernadero. 
+Todo esto mediante saltos, dash y movimientos rápidos. Tu misión es recoger todas las pipas posibles, evitar trampas, 
+esquivar enemigos y alcanzar la puerta de su querido invernadero. 
 
-⭐ Se encuentra **activo y se prevee un futuro crecimiento** del mundo de Mica.
+⭐ Se encuentra **activo y en continua mejora**.
 
 ---
 ## 📋 Requisitos
@@ -29,32 +29,33 @@ las pipas posibles, evitar trampas, esquivar enemigos y alcanzar la puerta de su
   - Ratón de campo
   - Avispa
 
-  ## Complejidad de Escenas
+  ## Complejidad de Escenas🖼️
   Entorno transitable con interacciones y animaciones.
 
-  ## Número de Escenas
+  ## Número de Escenas🎞️
   Cuenta con 3 niveles que van aumentando su dificultad.
   
-  ## Bonificaciones y Coleccionables
+  ## Bonificaciones y Coleccionables🪙
   Existen dos tipos de elementos interactivos que son recogibles por el jugador:
   - Pipas
   - Vida extra
 
-  ## Funciones de red
+  ## Funciones de red🛜
   
 
-  ## Sonido
+  ## Sonido🔊
   Elaborado ya que existen:
   - 2 efectos de sonido simples que tienen lugar ante ciertos eventos del juego (Al recibir daño y al abrir la puerta final)
   - 3 canciones de fondo (cada 1 en un nivel distinto)
 
-  ## Opciones
-  Existe un menú de opciones que permite configurar dos ó más opciones.
+  ## Opciones🎛️
+  Existe un menú de opciones que permite configurar:
+  
 
-  ## Estética y jugabilidad
+  ## Estética y jugabilidad🕹️
   Buena calidad porque está hecha con amor (y con un poco de prisa).
   
 ---
-⭐ Persona Desarrolladora del Proyecto:   **G.A.V.I.**  
+🎯 Persona Desarrolladora del Proyecto:   **G.A.V.I.**  
 
 
