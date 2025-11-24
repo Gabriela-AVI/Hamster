@@ -1,3 +1,4 @@
+AudioStreamPlayer2D
 Label
 Sprite2D
 Node2D
@@ -11,4 +12,3 @@ AnimatedSprite2D
 CharacterBody2D
 RayCast2D
 RigidBody2D
-AudioStreamPlayer2D
