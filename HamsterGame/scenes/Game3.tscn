@@ -490,6 +490,7 @@ region_rect = Rect2(48, 0, 48, 48)
 [node name="GameController" type="Node2D" parent="." node_paths=PackedStringArray("ui", "pause_manager")]
 position = Vector2(3601, 0)
 script = ExtResource("19_xby7w")
+level_id = 3
 ui = NodePath("../UIState")
 pause_manager = NodePath("../PauseMenu")
 

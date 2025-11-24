@@ -407,6 +407,7 @@ parameters/looping = true
 [node name="GameController" type="Node2D" parent="." node_paths=PackedStringArray("ui", "pause_manager")]
 position = Vector2(1657, 35)
 script = ExtResource("15_katk2")
+level_id = 2
 ui = NodePath("../UIState")
 pause_manager = NodePath("../PauseMenu")
 
