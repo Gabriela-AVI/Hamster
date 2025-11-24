@@ -379,13 +379,13 @@ label_settings = SubResource("LabelSettings_1earx")
 [node name="Label_8" type="Label" parent="."]
 texture_filter = 1
 offset_left = 1961.0
-offset_top = 39.0
+offset_top = 38.0
 offset_right = 2273.0
-offset_bottom = 109.0
+offset_bottom = 108.0
 text = "¡¡MUY BIEN HECHOO!!
 
 ¿Estás preparad@ para el 
-siguiente nivel?"
+siguiente nivel? Pulsa (E)"
 label_settings = SubResource("LabelSettings_1earx")
 
 [node name="DoorArea" type="Area2D" parent="." node_paths=PackedStringArray("tilemap") groups=["door"]]
