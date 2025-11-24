@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://05asbg8cii5s"]
+[gd_scene load_steps=24 format=4 uid="uid://05asbg8cii5s"]
 
 [ext_resource type="Texture2D" uid="uid://du0ekktrcbrgq" path="res://assets/background_0.png" id="1_uva1g"]
 [ext_resource type="Script" uid="uid://dwmepp6ov171y" path="res://scripts/clouds.gd" id="2_81ei4"]
@@ -15,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://d18wp7lvnib7e" path="res://music/2-cherry-cute-bgm-271158.mp3" id="13_uva1g"]
 [ext_resource type="PackedScene" uid="uid://cbuqayiwrwc6m" path="res://menu/pause_menu.tscn" id="14_81ei4"]
 [ext_resource type="PackedScene" uid="uid://dcixxnjwcnkp6" path="res://menu/ui_state.tscn" id="15_noa2v"]
+[ext_resource type="Script" uid="uid://b2wywi1nkqmob" path="res://menu/LevelController.gd" id="16_heyx7"]
 [ext_resource type="FontFile" uid="uid://dvkg6fga4w38" path="res://menu/FreePixel.ttf" id="17_1earx"]
 [ext_resource type="Script" uid="uid://dyk7in10kckh5" path="res://music/music.gd" id="17_hxw3l"]
 
@@ -440,14 +441,17 @@ position = Vector2(1526, 23)
 stream = ExtResource("13_uva1g")
 autoplay = true
 parameters/looping = true
+script = ExtResource("17_hxw3l")
 
 [node name="PauseMenu" parent="." instance=ExtResource("14_81ei4")]
 
 [node name="UIState" parent="." instance=ExtResource("15_noa2v")]
 
-[node name="GameController" type="Node2D" parent="."]
+[node name="GameController" type="Node2D" parent="." node_paths=PackedStringArray("ui", "pause_manager")]
 position = Vector2(1799, 43)
-script = ExtResource("17_hxw3l")
+script = ExtResource("16_heyx7")
+ui = NodePath("../UIState")
+pause_manager = NodePath("../PauseMenu")
 
 [node name="Timer" type="Timer" parent="GameController"]
 
