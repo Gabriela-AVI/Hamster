@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1763942478
+::res://::1763994222
 icon.svg::CompressedTexture2D::8808989235190531035::1762550529::1763843786::1::::<><><>0<>0<>46d28227b94c78aa47f499ec04016249<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://assets/::1763918902
 48x48 trees.png::CompressedTexture2D::8707341658202396220::1763845751::1763845760::1::::<><><>0<>0<>78fbd1e8049f61c433ab0e8cf47cfe0e<>res://.godot/imported/48x48 trees.png-0e42ca2095cdecbda63c34b705b548cb.ctex::
@@ -34,14 +34,14 @@ heart.gd::GDScript::220526230938000947::1763227545::0::1::::<>Area2D<><>0<>0<><>
 heart.tscn::PackedScene::4214101731074508650::1763918011::0::1::::<><><>0<>0<><>::uid://de3bgh7gpwnj::::res://elements/heart.gd<>uid://d2fsc5jbot7xw::::res://assets/HEART2.png
 pipe.gd::GDScript::3519958815614920475::1763919830::0::1::::<>Area2D<><>0<>0<><>::
 pipe.tscn::PackedScene::6882390210936162735::1763920270::0::1::::<><><>0<>0<><>::uid://d3g2oheh6110d::::res://assets/pipa_sprite_sheet.png<>uid://bqfdhb1p3d7c6::::res://elements/pipe.gd
-::res://menu/::1763933273
+::res://menu/::1763943454
 FreePixel.ttf::FontFile::254537984662101785::1763761183::1763766990::1::::<><><>0<>0<>d6d5c3a0d90767cd67b5e7b317e199b0<>res://.godot/imported/FreePixel.ttf-fa632704cb7fb21fdbd415be0f0278a5.fontdata::
 GameState.gd::GDScript::5402838358141277786::1763917993::0::1::::<>Node<><>0<>0<><>::
 LevelController.gd::GDScript::4328432728757976397::1763933086::0::1::::<>Node<><>0<>0<><>::
 LevelStatEntry.gd::GDScript::8105018625294349844::1763762053::0::1::::<>HBoxContainer<><>0<>0<><>::
 LevelStatEntry.tscn::PackedScene::2879302392940321910::1763768042::0::1::::<><><>0<>0<><>::uid://dnqeqcldexr3a::::res://menu/LevelStatEntry.gd<>uid://clglqaok7gfnk::::res://menu/menuText.tres
 LevelStatsCreator.gd::GDScript::9130746980558856731::1763761680::0::1::::<>Control<><>0<>0<><>::
-MainMenu.tscn::PackedScene::4652349187882300145::1763933273::0::1::::<><><>0<>0<><>::uid://dthrtmx4435q6::::res://menu/MenuControl.gd<>uid://du0ekktrcbrgq::::res://assets/background_0.png<>uid://dwmepp6ov171y::::res://scripts/clouds.gd<>uid://clglqaok7gfnk::::res://menu/menuText.tres<>uid://d3daclqgnygjb::::res://menu/LevelStatsCreator.gd<>uid://cf1prhdtdx3vp::::res://assets/background_1-export.png<>uid://bha0xpls50hyc::::res://menu/LevelStatEntry.tscn<>uid://dvkg6fga4w38::::res://menu/FreePixel.ttf
+MainMenu.tscn::PackedScene::4652349187882300145::1763943454::0::1::::<><><>0<>0<><>::uid://dthrtmx4435q6::::res://menu/MenuControl.gd<>uid://du0ekktrcbrgq::::res://assets/background_0.png<>uid://dwmepp6ov171y::::res://scripts/clouds.gd<>uid://clglqaok7gfnk::::res://menu/menuText.tres<>uid://d3daclqgnygjb::::res://menu/LevelStatsCreator.gd<>uid://cf1prhdtdx3vp::::res://assets/background_1-export.png<>uid://bha0xpls50hyc::::res://menu/LevelStatEntry.tscn<>uid://dvkg6fga4w38::::res://menu/FreePixel.ttf<>uid://d18wp7lvnib7e::::res://music/2-cherry-cute-bgm-271158.mp3
 MenuControl.gd::GDScript::8508367510609779911::1763916878::0::1::::<>Control<><>0<>0<><>::
 menuText.tres::LabelSettings::5558001395676447304::1763762948::0::1::::<><><>0<>0<><>::uid://b6xa751n55t6h::::res://menu/FreePixel.ttf
 PauseManager.gd::GDScript::2344114996888118785::1763918533::0::1::::<>Node<><>0<>0<><>::
